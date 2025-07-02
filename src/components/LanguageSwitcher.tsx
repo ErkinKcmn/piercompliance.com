@@ -6,7 +6,9 @@ const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
 
   const handleLanguageChange = (newLanguage: Language) => {
-    setLanguage(newLanguage);
+    if (newLanguage !== language) {
+      setLanguage(newLanguage);
+    }
   };
 
   return (
@@ -15,20 +17,20 @@ const LanguageSwitcher: React.FC = () => {
       <div className="flex bg-gray-100 rounded-lg p-1">
         <button
           onClick={() => handleLanguageChange('tr')}
-          className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+          className={`px-3 py-1 text-sm font-medium rounded-md transition-all duration-200 ${
             language === 'tr'
-              ? 'bg-primary text-white'
-              : 'text-gray-600 hover:text-primary'
+              ? 'bg-primary text-white shadow-sm'
+              : 'text-gray-600 hover:text-primary hover:bg-gray-200'
           }`}
         >
           TR
         </button>
         <button
           onClick={() => handleLanguageChange('en')}
-          className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+          className={`px-3 py-1 text-sm font-medium rounded-md transition-all duration-200 ${
             language === 'en'
-              ? 'bg-primary text-white'
-              : 'text-gray-600 hover:text-primary'
+              ? 'bg-primary text-white shadow-sm'
+              : 'text-gray-600 hover:text-primary hover:bg-gray-200'
           }`}
         >
           EN

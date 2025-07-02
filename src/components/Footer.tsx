@@ -15,6 +15,20 @@ const Footer: React.FC = () => {
     }
   };
 
+  const handleServiceClick = (serviceId: string) => {
+    const serviceSection = document.getElementById('services');
+    if (serviceSection) {
+      serviceSection.scrollIntoView({ behavior: 'smooth' });
+      // Highlight the specific service after scrolling
+      setTimeout(() => {
+        const serviceElement = document.querySelector(`[data-service="${serviceId}"]`);
+        if (serviceElement) {
+          serviceElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500);
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -81,12 +95,54 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t.servicesFooter}</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>{t.reachComplianceFooter}</li>
-              <li>{t.kkdikConsulting}</li>
-              <li>{t.clpServices}</li>
-              <li>{t.bprSupport}</li>
-              <li>{t.gpsrComplianceFooter}</li>
-              <li>{t.legalAdvisoryFooter}</li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('reach')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.reachComplianceFooter}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('kkdik')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.kkdikConsulting}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('clp')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.clpServices}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('bpr')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.bprSupport}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('gpsr')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.gpsrComplianceFooter}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('legal')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.legalAdvisoryFooter}
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -107,17 +163,17 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-primary" />
-                  <span className="text-gray-300">Istanbul, Turkey & Berlin, Germany</span>
+                  <span className="text-gray-300">Istanbul, Turkey</span>
                 </div>
               </div>
             </div>
 
-            {/* Legal */}
+            {/* Legal - Centered */}
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mb-4">
                 {t.allRightsReserved}
               </p>
-              <div className="mt-2 space-x-4 text-sm">
+              <div className="flex flex-col md:flex-row md:justify-end space-y-2 md:space-y-0 md:space-x-4 text-sm">
                 <a href="#" className="text-gray-400 hover:text-primary transition-colors">
                   {t.privacyPolicy}
                 </a>
