@@ -6,7 +6,7 @@ const Logo: React.FC<{ className?: string }> = ({ className = "h-8 w-8" }) => {
 const Logo: React.FC<{ className?: string }> = ({ className = "h-8 w-8" }) => {
   return (
     <img
-      src="/pıer complıance.png"
+      src="/pier-compliance.png"
       alt="Pier Compliance Logo"
       className={className}
     />
