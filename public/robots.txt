@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://piercompliance.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow unnecessary paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /api/
+
+# Allow important pages
+Allow: /$
+Allow: /#services
+Allow: /#about
+Allow: /#contact
