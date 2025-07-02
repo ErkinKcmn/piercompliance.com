@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logo: React.FC<{ className?: string }> = ({ className = "h-12 w-12" }) => {
+const Logo: React.FC<{ className?: string }> = ({ className = "h-20 w-20" }) => {
   return (
     <img
       src="/pier-compliance.png"
