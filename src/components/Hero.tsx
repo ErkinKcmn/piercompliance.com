@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           <div className="mb-8">
             <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/30">
               <Globe className="h-5 w-5 text-black" />
-              <span className="text-black font-semibold">Dünya Çapında Hizmet</span>
+              <span className="text-black font-semibold">{t.worldwideService}</span>
               <Award className="h-5 w-5 text-black" />
             </div>
           </div>
@@ -103,15 +103,15 @@ const Hero: React.FC = () => {
             <div className="flex flex-wrap justify-center items-center gap-8 text-black">
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2 border border-white/20">
                 <Globe className="h-5 w-5 text-black" />
-                <span className="font-bold text-black">Türkiye & Avrupa</span>
+                <span className="font-bold text-black">{t.turkeyEurope}</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2 border border-white/20">
                 <Award className="h-5 w-5 text-black" />
-                <span className="font-bold text-black">Uzman Ekip</span>
+                <span className="font-bold text-black">{t.expertTeam}</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2 border border-white/20">
                 <CheckCircle className="h-5 w-5 text-black" />
-                <span className="font-bold text-black">Kanıtlanmış Başarı</span>
+                <span className="font-bold text-black">{t.provenSuccess}</span>
               </div>
             </div>
           </div>

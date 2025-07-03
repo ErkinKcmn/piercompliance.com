@@ -143,6 +143,14 @@ const Footer: React.FC = () => {
                   {t.legalAdvisoryFooter}
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => handleServiceClick('testing')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.testConsultancyFooter}
+                </button>
+              </li>
             </ul>
           </div>
         </div>

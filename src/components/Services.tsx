@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Shield, Scale, ChevronDown, ChevronUp } from 'lucide-react';
+import { FileText, Shield, Scale, ChevronDown, ChevronUp, TestTube } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 import { translations } from '../data/translations';
 
@@ -23,7 +23,11 @@ const Services: React.FC = () => {
         t.kkdikCompliance,
         t.clpClassification,
         t.bprBiocidal,
-        t.esprCompliance
+        t.esprCompliance,
+        t.onlyRepresentative,
+        t.thirdPartyRepresentation,
+        t.siefManagement,
+        t.testConsultancy
       ],
       detailedServices: [
         {
@@ -49,6 +53,12 @@ const Services: React.FC = () => {
           title: t.bprDetailTitle,
           description: t.bprDetailDesc,
           benefits: t.bprBenefits
+        },
+        {
+          id: 'espr',
+          title: t.esprDetailTitle,
+          description: t.esprDetailDesc,
+          benefits: t.esprBenefits
         }
       ]
     },
@@ -63,7 +73,8 @@ const Services: React.FC = () => {
         t.safetyAssessment,
         t.riskAnalysis,
         t.marketPlacement,
-        t.ecommerceCompliance
+        t.ecommerceCompliance,
+        t.testConsultancy
       ],
       detailedServices: [
         {

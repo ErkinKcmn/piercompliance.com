@@ -11,11 +11,45 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*.json$
-Disallow: /*.xml$
 Disallow: /api/
 
-# Allow important pages
+# Allow important pages and services
 Allow: /$
 Allow: /#services
 Allow: /#about
 Allow: /#contact
+Allow: /reach-uyumluluk
+Allow: /kkdik-danismanligi
+Allow: /gpsr-compliance
+Allow: /biyosidal-urun-ruhsatlandirma
+Allow: /test-danismanligi
+Allow: /duzenleyici-isler
+Allow: /espr-uyumluluk
+Allow: /clp-siniflandirma
+
+# Important: Allow search engines to crawl all service-related content
+Allow: /*reach*
+Allow: /*kkdik*
+Allow: /*gpsr*
+Allow: /*espr*
+Allow: /*clp*
+Allow: /*biyosidal*
+Allow: /*test*
+Allow: /*duzenleyici*
+Allow: /*uyumluluk*
+Allow: /*compliance*
+Allow: /*regulatory*
+
+# Cache directives for better performance
+# Allow caching of static assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$

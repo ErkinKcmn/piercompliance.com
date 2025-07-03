@@ -11,12 +11,16 @@ export const translations = {
     heroSubtitle: 'Dünya çapında işletmeler için Türkiye ve Avrupa uyumluluk süreçlerinde uzman düzenleyici işler danışmanlığı, kimyasal uyumluluk hizmetleri ve hukuki danışmanlık',
     getStarted: 'Başlayın',
     ourServices: 'Hizmetlerimiz',
+    worldwideService: 'Dünya Çapında Hizmet',
+    turkeyEurope: 'Türkiye & Avrupa',
+    expertTeam: 'Uzman Ekip',
+    provenSuccess: 'Kanıtlanmış Başarı',
     reachCompliance: 'REACH ve KKDIK Uyumluluğu',
-    reachDesc: 'Karmaşık AB ve Türk kimyasal düzenlemelerinde uzman rehberlik',
+    reachDesc: 'AB ve Türk kimyasal düzenlemelerinde uzman rehberlik',
     productSafety: 'Ürün Güvenliği Danışmanlığı',
-    productSafetyDesc: 'GPSR uyumluluğu ve teknik dosya hazırlama',
+    productSafetyDesc: 'GPSR uyumluluğu, test danışmanlığı ve teknik dosya hazırlama',
     legalConsultancy: 'Hukuki Danışmanlık',
-    legalConsultancyDesc: 'Kapsamlı hukuki danışmanlık ve risk analizi',
+    legalConsultancyDesc: 'Kapsamlı hukuki danışmanlık hizmetleri',
 
     // Services Section
     servicesTitle: 'Hizmetlerimiz',
@@ -27,10 +31,14 @@ export const translations = {
     regulatoryAffairs: 'Düzenleyici İşler',
     regulatoryDesc: 'Türkiye ve Avrupa pazarlarına girmek isteyen kimyasal üreticiler ve ithalatçılar için eksiksiz REACH, KKDIK, CLP, BPR ve ESPR uyumluluk hizmetleri.',
     reachRegistration: 'REACH Kayıt Desteği',
-    kkdikCompliance: 'KKDIK Uyumluluğu (Türkiye)',
+    kkdikCompliance: 'KKDIK Uyumluluğu',
     clpClassification: 'CLP Sınıflandırma ve Etiketleme',
-    bprBiocidal: 'BPR Biyosidal Ürünler',
+    bprBiocidal: 'Biyosidal Ürün Ruhsatlandırma',
     esprCompliance: 'ESPR Uyumluluğu',
+    onlyRepresentative: 'Only Representative (Tek Temsilcilik)',
+    thirdPartyRepresentation: '3. Taraf Temsilciliği',
+    siefManagement: 'SIEF (MBDF) Yönetimi',
+    testConsultancy: 'Test Danışmanlığı',
 
     // Detailed Service Information
     reachDetailTitle: 'REACH Uyumluluğu - Avrupa Kimyasal Düzenlemesi',
@@ -41,7 +49,10 @@ export const translations = {
       'Tedarik zinciri iletişimi optimizasyonu',
       'İlgili mevzuat kapsamında risk değerlendirmesi ve yönetimi',
       'Mevzuat uyumluluğu garantisi',
-      'Rekabet avantajı elde etme'
+      'Rekabet avantajı elde etme',
+      'Only Representative hizmetleri',
+      'SIEF (MBDF) yönetimi ve koordinasyonu',
+      'Test danışmanlığı ve stratejisi'
     ],
 
     kkdikDetailTitle: 'KKDIK Uyumluluğu - Türkiye Kimyasal Düzenlemesi',
@@ -52,7 +63,9 @@ export const translations = {
       'Kimyasal kayıt süreçleri',
       'Güvenlik bilgi formları hazırlama',
       'Mevzuat takibi ve güncelleme',
-      'Yerel otorite iletişimi'
+      'Yerel otorite iletişimi',
+      'Test danışmanlığı ve koordinasyonu',
+      'Uyumluluk stratejisi geliştirme'
     ],
 
     clpDetailTitle: 'CLP Sınıflandırma ve Etiketleme',
@@ -63,10 +76,11 @@ export const translations = {
       'Zehir merkezi bildirimleri',
       'Ambalaj uyumluluğu',
       'Tedarik zinciri bilgilendirmesi',
-      'Yasal sorumluluk azaltma'
+      'Yasal sorumluluk azaltma',
+      'Test danışmanlığı ve değerlendirme'
     ],
 
-    bprDetailTitle: 'BPR Biyosidal Ürünler Düzenlemesi',
+    bprDetailTitle: 'Biyosidal Ürün Ruhsatlandırma',
     bprDetailDesc: 'BPR (Biocidal Products Regulation), biyosidal ürünlerin AB pazarında satışa sunulması için gerekli yetkilendirme süreçlerini düzenler. İnsan sağlığı, hayvan sağlığı ve çevreyi korumak amacıyla oluşturulmuştur.',
     bprBenefits: [
       'Biyosidal ürün yetkilendirmesi',
@@ -74,7 +88,20 @@ export const translations = {
       'Etkililik değerlendirmesi',
       'İlgili mevzuat kapsamında risk değerlendirmesi',
       'Etiket onayı',
-      'Pazar erişimi sağlama'
+      'Pazar erişimi sağlama',
+      'Test danışmanlığı ve stratejisi',
+      'Düzenleyici dosya hazırlama'
+    ],
+
+    esprDetailTitle: 'ESPR Uyumluluğu - Sürdürülebilir Ürünler Düzenlemesi',
+    esprDetailDesc: 'ESPR (Ecodesign for Sustainable Products Regulation), ürünlerin çevresel performansını iyileştirmek ve döngüsel ekonomiyi desteklemek için AB\'de yürürlüğe giren yeni düzenlemedir.',
+    esprBenefits: [
+      'Sürdürülebilirlik gereksinimlerini karşılama',
+      'Ürün pasaportu hazırlama',
+      'Çevresel etki değerlendirmesi',
+      'Döngüsel ekonomi uyumluluğu',
+      'Dijital ürün kimliği oluşturma',
+      'Test danışmanlığı ve doğrulama'
     ],
 
     // Product Safety
@@ -83,19 +110,21 @@ export const translations = {
     gpsrCompliance: 'GPSR Uyumluluğu',
     technicalFile: 'Teknik Dosya Hazırlama',
     safetyAssessment: 'Güvenlik Değerlendirmesi',
-    riskAnalysis: 'İlgili mevzuat kapsamında risk analizi ve azaltma',
+    riskAnalysis: 'Risk analizi ve azaltma',
     marketPlacement: 'Mevzuat-Ürün Uyumu ve Pazar Yerleştirme',
     ecommerceCompliance: 'E-ticaret ve Perakende Uyumluluğu',
 
     gpsrDetailTitle: 'GPSR Uyumluluğu - Genel Ürün Güvenliği Düzenlemesi',
-    gpsrDetailDesc: 'GPSR (General Product Safety Regulation), AB pazarında satılan tüm tüketici ürünlerinin güvenliğini sağlamak için 2021 yılında yürürlüğe giren kapsamlı bir düzenlemedir. Üreticiler, ithalatçılar ve distribütörler için yeni yükümlülükler getirmektedir.',
+    gpsrDetailDesc: 'GPSR (General Product Safety Regulation), AB pazarında satılan tüm tüketici ürünlerinin güvenliğini sağlamak için 2024 yılında yürürlüğe giren kapsamlı bir düzenlemedir. Üreticiler, ithalatçılar ve distribütörler için yeni yükümlülükler getirmektedir.',
     gpsrBenefits: [
       'AB pazarında yasal ürün satışı',
       'Tüketici güvenliği garantisi',
       'İlgili mevzuat kapsamında risk değerlendirmesi ve yönetimi',
       'Ürün izlenebilirliği',
       'Pazar gözetimi uyumluluğu',
-      'Marka güvenilirliği artırma'
+      'Marka güvenilirliği artırma',
+      'Test danışmanlığı ve doğrulama',
+      'Güvenlik dosyası hazırlama'
     ],
 
     // Legal Advisory
@@ -103,7 +132,7 @@ export const translations = {
     legalDesc: 'Türkiye ve Avrupa pazarlarında faaliyet göstermek isteyen uluslararası işletmeler için uzman hukuki danışmanlık.',
     contractReview: 'Sözleşme İnceleme ve Hazırlama',
     legalRepresentation: 'Hukuki Temsil',
-    complianceRisk: 'İlgili mevzuat kapsamında uyumluluk risk analizi',
+    complianceRisk: 'İlgili mevzuat kapsamında uyumluluk analizi',
     regulatoryStrategy: 'Düzenleyici Strateji',
 
     legalDetailTitle: 'Hukuki Danışmanlık ve Uyumluluk Hizmetleri',
@@ -129,9 +158,9 @@ export const translations = {
     
     // Company Details
     companyOverview: 'Şirket Profili',
-    companyOverviewText: 'Şirketimiz, güçlü bir uzmanlık birikimi ve disiplinlerarası bakış açısıyla faaliyet gösteren bir danışmanlık kuruluşudur. Ekibimiz, hem kimya mühendisliği hem de hukuk alanında derin bir uzmanlığa sahip profesyonellerden oluşmaktadır.',
+    companyOverviewText: 'Pier Compliance, güçlü uzmanlık birikimi ve disiplinlerarası yaklaşımla faaliyet gösteren bir danışmanlık kuruluşudur. Ekibimiz, kimya mühendisliği ve hukuk alanlarında derin uzmanlığa sahip profesyonellerden oluşmaktadır.',
     foundersExpertise: 'Kurucu Uzmanlığı',
-    foundersExpertiseText: 'Kurucularımızdan biri, Kimya Mühendisliği ve Mühendislik Yönetimi alanlarında yüksek lisans derecelerine sahip bir kimya mühendisi olarak, karmaşık teknik süreçlerin yönetiminde ve endüstriyel gerekliliklerin karşılanmasında önemli bir deneyim sunmaktadır. Diğer kurucumuz ise, Ekonomi Hukuku alanında yüksek lisans derecesi bulunan bir avukat olarak, mevzuat uyumluluğu ve düzenleyici çerçevelerin titizlikle uygulanmasında uzmanlaşmıştır.',
+    foundersExpertiseText: 'Şirketimiz, kimya mühendisliği ve mühendislik yönetimi alanlarında yüksek lisans derecelerine sahip deneyimli bir kimya mühendisi ile ekonomi hukuku alanında yüksek lisans derecesi bulunan uzman bir avukat tarafından kurulmuştur. Bu güçlü akademik altyapı ve sektörel deneyim, müşterilerimize hem teknik hem de hukuki açıdan kapsamlı çözümler sunmamızı sağlamaktadır.',
     experienceAndApproach: 'Deneyim ve Yaklaşımımız',
     experienceAndApproachText: 'Yıllara dayanan tecrübemiz sayesinde, kurumların uyumluluk (compliance) süreçlerini hızlı, şeffaf ve etkin biçimde yürütmelerine yardımcı oluyoruz. Sürecin her aşamasında karşılaşılabilecek hukuki ve teknik engelleri öngörerek, en pratik ve uygulanabilir çözümleri sunuyoruz.',
     comprehensiveServices: 'Kapsamlı Hizmet Anlayışı',
@@ -161,8 +190,8 @@ export const translations = {
     phone: 'Telefon',
     officeLocations: 'Ofis Konumları',
     businessHours: 'Çalışma Saatleri',
-    mondayFriday: 'Pazartesi - Cuma: 09:00 - 18:00 (TSİ)',
-    saturday: 'Cumartesi: 10:00 - 14:00 (TSİ)',
+    mondayFriday: 'Pazartesi - Cuma: 09:00 - 18:00 (GMT+3)',
+    saturday: 'Cumartesi: 10:00 - 14:00 (GMT+3)',
     sunday: 'Pazar: Kapalı',
 
     // Contact Form
@@ -178,6 +207,7 @@ export const translations = {
     regulatoryAffairsOption: 'Düzenleyici İşler',
     productSafetyOption: 'Ürün Güvenliği Danışmanlığı',
     legalAdvisoryOption: 'Hukuki Danışmanlık',
+    testConsultancyOption: 'Test Danışmanlığı',
     other: 'Diğer',
     message: 'Mesaj',
     messagePlaceholder: 'Türkiye ve Avrupa pazarlarındaki uyumluluk ihtiyaçlarınız hakkında bize bilgi verin...',
@@ -194,7 +224,8 @@ export const translations = {
     bprSupport: 'BPR Desteği',
     gpsrComplianceFooter: 'GPSR Uyumluluğu',
     legalAdvisoryFooter: 'Hukuki Danışmanlık',
-    allRightsReserved: '© 2024 Pier Compliance. Tüm hakları saklıdır.',
+    testConsultancyFooter: 'Test Danışmanlığı',
+    allRightsReserved: '© 2025 Pier Compliance. Tüm hakları saklıdır.',
     privacyPolicy: 'Gizlilik Politikası',
     termsOfService: 'Hizmet Şartları',
     cookiePolicy: 'Çerez Politikası',
@@ -214,12 +245,16 @@ export const translations = {
     heroSubtitle: 'Expert regulatory affairs consultancy, chemical compliance services, and legal advisory for businesses worldwide seeking compliance in Turkey and Europe',
     getStarted: 'Get Started',
     ourServices: 'Our Services',
+    worldwideService: 'Worldwide Service',
+    turkeyEurope: 'Turkey & Europe',
+    expertTeam: 'Expert Team',
+    provenSuccess: 'Proven Success',
     reachCompliance: 'REACH & KKDIK Compliance',
-    reachDesc: 'Expert guidance through complex EU and Turkish chemical regulations',
+    reachDesc: 'Expert guidance through EU and Turkish chemical regulations',
     productSafety: 'Product Safety Advisory',
-    productSafetyDesc: 'GPSR compliance and technical file preparation',
+    productSafetyDesc: 'GPSR compliance, testing consultancy and technical file preparation',
     legalConsultancy: 'Legal Consultancy',
-    legalConsultancyDesc: 'Comprehensive legal advisory and risk analysis',
+    legalConsultancyDesc: 'Comprehensive legal advisory services',
 
     // Services Section
     servicesTitle: 'Our Services',
@@ -230,10 +265,14 @@ export const translations = {
     regulatoryAffairs: 'Regulatory Affairs',
     regulatoryDesc: 'Complete REACH, KKDIK, CLP, BPR, and ESPR compliance services for chemical manufacturers and importers entering Turkish and European markets.',
     reachRegistration: 'REACH Registration Support',
-    kkdikCompliance: 'KKDIK Compliance (Turkey)',
+    kkdikCompliance: 'KKDIK Compliance',
     clpClassification: 'CLP Classification & Labeling',
-    bprBiocidal: 'BPR Biocidal Products',
+    bprBiocidal: 'Biocidal Product Authorization',
     esprCompliance: 'ESPR Compliance',
+    onlyRepresentative: 'Only Representative Services',
+    thirdPartyRepresentation: '3rd Party Representation',
+    siefManagement: 'SIEF Management',
+    testConsultancy: 'Testing Consultancy',
 
     // Detailed Service Information
     reachDetailTitle: 'REACH Compliance - European Chemical Regulation',
@@ -244,7 +283,10 @@ export const translations = {
       'Supply chain communication optimization',
       'Risk assessment and management under relevant legislation',
       'Regulatory compliance guarantee',
-      'Competitive advantage achievement'
+      'Competitive advantage achievement',
+      'Only Representative services',
+      'SIEF management and coordination',
+      'Testing consultancy and strategy'
     ],
 
     kkdikDetailTitle: 'KKDIK Compliance - Turkish Chemical Regulation',
@@ -255,7 +297,9 @@ export const translations = {
       'Chemical registration processes',
       'Safety data sheet preparation',
       'Regulatory monitoring and updates',
-      'Local authority communication'
+      'Local authority communication',
+      'Testing consultancy and coordination',
+      'Compliance strategy development'
     ],
 
     clpDetailTitle: 'CLP Classification and Labeling',
@@ -266,10 +310,11 @@ export const translations = {
       'Poison center notifications',
       'Packaging compliance',
       'Supply chain information',
-      'Legal liability reduction'
+      'Legal liability reduction',
+      'Testing consultancy and assessment'
     ],
 
-    bprDetailTitle: 'BPR Biocidal Products Regulation',
+    bprDetailTitle: 'Biocidal Product Authorization',
     bprDetailDesc: 'BPR (Biocidal Products Regulation) regulates the authorization processes required for biocidal products to be placed on the EU market. It was created to protect human health, animal health and the environment.',
     bprBenefits: [
       'Biocidal product authorization',
@@ -277,7 +322,20 @@ export const translations = {
       'Efficacy assessment',
       'Risk assessment under relevant legislation',
       'Label approval',
-      'Market access provision'
+      'Market access provision',
+      'Testing consultancy and strategy',
+      'Regulatory dossier preparation'
+    ],
+
+    esprDetailTitle: 'ESPR Compliance - Sustainable Products Regulation',
+    esprDetailDesc: 'ESPR (Ecodesign for Sustainable Products Regulation) is a new regulation coming into force in the EU to improve the environmental performance of products and support the circular economy.',
+    esprBenefits: [
+      'Meeting sustainability requirements',
+      'Product passport preparation',
+      'Environmental impact assessment',
+      'Circular economy compliance',
+      'Digital product identity creation',
+      'Testing consultancy and verification'
     ],
 
     // Product Safety
@@ -286,19 +344,21 @@ export const translations = {
     gpsrCompliance: 'GPSR Compliance',
     technicalFile: 'Technical File Preparation',
     safetyAssessment: 'Safety Assessment',
-    riskAnalysis: 'Risk analysis and mitigation under relevant legislation',
+    riskAnalysis: 'Risk analysis and mitigation',
     marketPlacement: 'Regulatory-Product Compliance & Market Placement',
     ecommerceCompliance: 'E-commerce & Retail Compliance',
 
     gpsrDetailTitle: 'GPSR Compliance - General Product Safety Regulation',
-    gpsrDetailDesc: 'GPSR (General Product Safety Regulation) is a comprehensive regulation that came into force in 2021 to ensure the safety of all consumer products sold in the EU market. It brings new obligations for manufacturers, importers and distributors.',
+    gpsrDetailDesc: 'GPSR (General Product Safety Regulation) is a comprehensive regulation that came into force in 2024 to ensure the safety of all consumer products sold in the EU market. It brings new obligations for manufacturers, importers and distributors.',
     gpsrBenefits: [
       'Legal product sales in EU market',
       'Consumer safety guarantee',
       'Risk assessment and management under relevant legislation',
       'Product traceability',
       'Market surveillance compliance',
-      'Brand reliability enhancement'
+      'Brand reliability enhancement',
+      'Testing consultancy and verification',
+      'Safety documentation preparation'
     ],
 
     // Legal Advisory
@@ -306,7 +366,7 @@ export const translations = {
     legalDesc: 'Expert legal consultancy for international businesses seeking to operate in Turkish and European markets.',
     contractReview: 'Contract Review & Drafting',
     legalRepresentation: 'Legal Representation',
-    complianceRisk: 'Compliance risk analysis under relevant legislation',
+    complianceRisk: 'Compliance analysis under relevant legislation',
     regulatoryStrategy: 'Regulatory Strategy',
 
     legalDetailTitle: 'Legal Advisory and Compliance Services',
@@ -332,9 +392,9 @@ export const translations = {
     
     // Company Details
     companyOverview: 'Company Profile',
-    companyOverviewText: 'Our company is a consultancy organization operating with strong expertise and an interdisciplinary perspective. Our team consists of professionals with deep expertise in both chemical engineering and law.',
+    companyOverviewText: 'Pier Compliance is a consultancy organization operating with strong expertise and an interdisciplinary approach. Our team consists of professionals with deep expertise in both chemical engineering and law.',
     foundersExpertise: 'Founders\' Expertise',
-    foundersExpertiseText: 'One of our founders, as a chemical engineer with master\'s degrees in Chemical Engineering and Engineering Management, brings significant experience in managing complex technical processes and meeting industrial requirements. Our other founder, as a lawyer with a master\'s degree in Economic Law, specializes in regulatory compliance and meticulous application of regulatory frameworks.',
+    foundersExpertiseText: 'Our company was founded by an experienced chemical engineer with master\'s degrees in Chemical Engineering and Engineering Management, and an expert lawyer with a master\'s degree in Economic Law. This strong academic foundation and industry experience enables us to provide comprehensive solutions to our clients from both technical and legal perspectives.',
     experienceAndApproach: 'Experience and Approach',
     experienceAndApproachText: 'Thanks to our years of experience, we help institutions carry out their compliance processes quickly, transparently and effectively. By anticipating the legal and technical obstacles that may be encountered at every stage of the process, we offer the most practical and applicable solutions.',
     comprehensiveServices: 'Comprehensive Service Approach',
@@ -364,8 +424,8 @@ export const translations = {
     phone: 'Phone',
     officeLocations: 'Office Locations',
     businessHours: 'Business Hours',
-    mondayFriday: 'Monday - Friday: 9:00 AM - 6:00 PM (TST)',
-    saturday: 'Saturday: 10:00 AM - 2:00 PM (TST)',
+    mondayFriday: 'Monday - Friday: 9:00 AM - 6:00 PM (GMT+3)',
+    saturday: 'Saturday: 10:00 AM - 2:00 PM (GMT+3)',
     sunday: 'Sunday: Closed',
 
     // Contact Form
@@ -381,6 +441,7 @@ export const translations = {
     regulatoryAffairsOption: 'Regulatory Affairs',
     productSafetyOption: 'Product Safety Consultancy',
     legalAdvisoryOption: 'Legal Advisory',
+    testConsultancyOption: 'Testing Consultancy',
     other: 'Other',
     message: 'Message',
     messagePlaceholder: 'Tell us about your compliance needs in Turkish and European markets...',
@@ -397,7 +458,8 @@ export const translations = {
     bprSupport: 'BPR Support',
     gpsrComplianceFooter: 'GPSR Compliance',
     legalAdvisoryFooter: 'Legal Advisory',
-    allRightsReserved: '© 2024 Pier Compliance. All rights reserved.',
+    testConsultancyFooter: 'Testing Consultancy',
+    allRightsReserved: '© 2025 Pier Compliance. All rights reserved.',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
     cookiePolicy: 'Cookie Policy',

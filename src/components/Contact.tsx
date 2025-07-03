@@ -157,6 +157,7 @@ const Contact: React.FC = () => {
                   <option value="regulatory-affairs">{t.regulatoryAffairsOption}</option>
                   <option value="product-safety">{t.productSafetyOption}</option>
                   <option value="legal-advisory">{t.legalAdvisoryOption}</option>
+                  <option value="testing-consultancy">{t.testConsultancyOption}</option>
                   <option value="other">{t.other}</option>
                 </select>
               </div>
