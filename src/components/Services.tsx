@@ -14,16 +14,15 @@ const Services: React.FC = () => {
 
   const services = [
     {
-      id: 'regulatory',
+      id: 'compliance-management',
       icon: <FileText className="h-12 w-12 text-primary" />,
-      title: t.regulatoryAffairs,
-      description: t.regulatoryDesc,
+      title: t.complianceManagement,
+      description: t.complianceManagementDesc,
       features: [
         t.reachRegistration,
         t.kkdikCompliance,
         t.clpClassification,
         t.bprBiocidal,
-        t.esprCompliance,
         t.onlyRepresentative,
         t.thirdPartyRepresentation,
         t.siefManagement,
@@ -53,12 +52,6 @@ const Services: React.FC = () => {
           title: t.bprDetailTitle,
           description: t.bprDetailDesc,
           benefits: t.bprBenefits
-        },
-        {
-          id: 'espr',
-          title: t.esprDetailTitle,
-          description: t.esprDetailDesc,
-          benefits: t.esprBenefits
         }
       ]
     },
@@ -69,12 +62,13 @@ const Services: React.FC = () => {
       description: t.productSafetyFullDesc,
       features: [
         t.gpsrCompliance,
+        t.turkishProductSafety,
+        t.ecommerceCompliance,
+        t.esprCompliance,
         t.technicalFile,
         t.safetyAssessment,
         t.riskAnalysis,
-        t.marketPlacement,
-        t.ecommerceCompliance,
-        t.testConsultancy
+        t.marketPlacement
       ],
       detailedServices: [
         {
@@ -82,6 +76,18 @@ const Services: React.FC = () => {
           title: t.gpsrDetailTitle,
           description: t.gpsrDetailDesc,
           benefits: t.gpsrBenefits
+        },
+        {
+          id: 'turkish-product-safety',
+          title: t.turkishProductSafetyDetailTitle,
+          description: t.turkishProductSafetyDetailDesc,
+          benefits: t.turkishProductSafetyBenefits
+        },
+        {
+          id: 'espr',
+          title: t.esprDetailTitle,
+          description: t.esprDetailDesc,
+          benefits: t.esprBenefits
         }
       ]
     },

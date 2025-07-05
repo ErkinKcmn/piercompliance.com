@@ -151,6 +151,14 @@ const Footer: React.FC = () => {
                   {t.testConsultancyFooter}
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="text-gray-300 hover:text-primary transition-colors text-left"
+                >
+                  {t.complianceManagementFooter}
+                </button>
+              </li>
             </ul>
           </div>
         </div>

@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 >
                   <option value="">{t.selectService}</option>
-                  <option value="regulatory-affairs">{t.regulatoryAffairsOption}</option>
+                  <option value="compliance-management">{t.complianceManagementOption}</option>
                   <option value="product-safety">{t.productSafetyOption}</option>
                   <option value="legal-advisory">{t.legalAdvisoryOption}</option>
                   <option value="testing-consultancy">{t.testConsultancyOption}</option>
