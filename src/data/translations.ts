@@ -9,7 +9,6 @@ export const translations = {
     // Hero Section
     heroTitle: 'Uyumluluk Güvenle Buluşuyor',
     heroSubtitle: 'Dünya çapında işletmeler için Türkiye ve Avrupa uyumluluk süreçlerinde profesyonel uyumluluk yönetimi, kimyasal uyumluluk hizmetleri ve hukuki danışmanlık',
-    getStarted: 'Başlayın',
     ourServices: 'Hizmetlerimiz',
     worldwideService: 'Dünya Çapında Hizmet',
     turkeyEurope: 'Türkiye & Avrupa',
@@ -298,7 +297,6 @@ export const translations = {
     // Hero Section
     heroTitle: 'Compliance Meets Confidence',
     heroSubtitle: 'Professional compliance management, chemical compliance services, and legal advisory for businesses worldwide seeking compliance in Turkey and Europe',
-    getStarted: 'Get Started',
     ourServices: 'Our Services',
     worldwideService: 'Worldwide Service',
     turkeyEurope: 'Turkey & Europe',

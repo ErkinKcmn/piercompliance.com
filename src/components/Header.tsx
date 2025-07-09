@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <Logo className="h-10 w-10 text-primary" />
+            <Logo className="h-12 w-12 text-primary" />
             <span className="text-xl font-bold text-gray-900">Pier Compliance</span>
           </div>
 

@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <Logo className="h-10 w-10 text-primary" />
+              <Logo className="h-12 w-12 text-primary" />
               <span className="text-2xl font-bold">Pier Compliance</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-primary" />
-                  <span className="text-gray-300">+90 (212) 555-0123</span>
+                  <span className="text-gray-300">+90 532 509 77 58</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-primary" />

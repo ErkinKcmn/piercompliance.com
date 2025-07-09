@@ -46,13 +46,6 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <button
-              onClick={scrollToContact}
-              className="bg-white text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-3 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
-            >
-              <span>{t.getStarted}</span>
-              <ArrowRight className="h-6 w-6" />
-            </button>
-            <button
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               className="border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-300 backdrop-blur-sm"
             >
