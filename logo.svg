@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="url(#grad1)" stroke="#1e3a8a" stroke-width="2"/>
+  
+  <!-- Letter P -->
+  <path d="M 25 20 L 25 80 L 45 80 Q 55 80 55 70 L 55 50 Q 55 40 45 40 L 35 40 L 35 20 Z" fill="white"/>
+  
+  <!-- Compliance shield -->
+  <path d="M 60 30 L 70 35 L 70 50 Q 70 65 60 70 L 60 65 Q 68 60 68 50 L 68 38 Z" fill="white" opacity="0.9"/>
+  
+  <!-- Checkmark for compliance -->
+  <path d="M 62 45 L 66 49 L 68 47" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 
