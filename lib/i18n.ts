@@ -156,6 +156,14 @@ export interface Translations {
     subtitle: string
     comingSoon: string
     description: string
+    articles: Array<{
+      id: string
+      title: string
+      summary: string
+      date: string
+      source: string
+      readMore: string
+    }>
   }
   
   // FAQ
@@ -219,6 +227,34 @@ export interface Translations {
       message: string
       send: string
       success: string
+    }
+    quoteForm: {
+      title: string
+      subtitle: string
+      name: string
+      email: string
+      company: string
+      service: string
+      message: string
+      send: string
+      success: string
+      services: {
+        gpsr: string
+        epr: string
+        weee: string
+        battery: string
+        espr: string
+        kkdik: string
+        reach: string
+        biocidal: string
+        sds: string
+        labor: string
+        commercial: string
+        regulatory: string
+        gdpr: string
+        kvkk: string
+        c2c: string
+      }
     }
   }
   
@@ -470,7 +506,33 @@ export const translations: Record<Language, Translations> = {
       title: 'Haberler',
       subtitle: 'Son Haberler',
       comingSoon: 'Yaklaşan Haberler',
-      description: 'Pier Compliance\'in son haberleri ve güncel duyuruları burada.'
+      description: 'Pier Compliance\'in son haberleri ve güncel duyuruları burada.',
+      articles: [
+        {
+          id: 'biocidal-fee-increase',
+          title: 'Biyosidal Ücret Artışı',
+          summary: 'ECHA, enflasyon nedeniyle biyosidal ürünler için ücret artışı yapacağını duyurdu. Bu artış, biyosidal ürün lisanslama süreçlerini etkileyecek ve şirketlerin maliyetlerini artıracak.',
+          date: '15 Aralık 2024',
+          source: 'ECHA',
+          readMore: 'Devamını Oku'
+        },
+        {
+          id: 'gpsr-implementation',
+          title: 'GPSR\'nin AB\'de Yürürlüğe Girişi',
+          summary: 'Avrupa Birliği\'nde Genel Ürün Güvenliği Yönetmeliği (GPSR) yürürlüğe girdi. Bu yeni düzenleme, tüketici korumasını artıracak ve ürün güvenliği standartlarını yükseltecek.',
+          date: '10 Aralık 2024',
+          source: 'AB Ticaret Komisyonu',
+          readMore: 'Devamını Oku'
+        },
+        {
+          id: 'kkdik-registrations',
+          title: 'KKDİK Kayıtları ve Beklentiler',
+          summary: 'Türkiye\'de KKDIK kayıt süreçleri hızlanıyor. Şirketlerin kayıt yükümlülüklerini yerine getirmesi için son tarihler yaklaşıyor. Profesyonel danışmanlık hizmetleri kritik önem taşıyor.',
+          date: '5 Aralık 2024',
+          source: 'Çevre ve Şehircilik Bakanlığı',
+          readMore: 'Devamını Oku'
+        }
+      ]
     },
     faq: {
       title: 'Sık Sorulan Sorular',
@@ -548,6 +610,34 @@ export const translations: Record<Language, Translations> = {
         message: 'Mesajınız',
         send: 'Gönder',
         success: 'Mesajınız başarıyla gönderildi.'
+      },
+      quoteForm: {
+        title: 'Teklif Formu',
+        subtitle: 'Hizmet teklifi almak için formu doldurun',
+        name: 'Ad Soyad',
+        email: 'E-posta',
+        company: 'Şirket',
+        service: 'Hizmet Seçin',
+        message: 'Mesajınız',
+        send: 'Teklif Gönder',
+        success: 'Teklif talebiniz başarıyla gönderildi.',
+        services: {
+          gpsr: 'GPSR Uyumluluğu',
+          epr: 'EPR & Ambalaj',
+          weee: 'WEEE',
+          battery: 'Pil Direktifi',
+          espr: 'ESPR',
+          kkdik: 'KKDIK Uyumluluğu',
+          reach: 'REACH Uyumluluğu',
+          biocidal: 'Biyosidal Ürün Lisanslama',
+          sds: 'SDS Hazırlama',
+          labor: 'İş Hukuku',
+          commercial: 'Ticaret Hukuku',
+          regulatory: 'Düzenleyici Yönetimi',
+          gdpr: 'GDPR Uyumluluğu',
+          kvkk: 'KVKK Uyumluluğu',
+          c2c: 'Cradle to Cradle'
+        }
       }
     },
     footer: {
@@ -793,7 +883,33 @@ export const translations: Record<Language, Translations> = {
       title: 'News',
       subtitle: 'Latest News',
       comingSoon: 'Coming Soon',
-      description: 'Latest news and announcements from Pier Compliance.'
+      description: 'Latest news and announcements from Pier Compliance.',
+      articles: [
+        {
+          id: 'biocidal-fee-increase',
+          title: 'Biocidal Fee Increase',
+          summary: 'ECHA has announced a fee increase for biocidal products due to inflation. This increase will affect biocidal product licensing processes and raise costs for companies.',
+          date: 'December 15, 2024',
+          source: 'ECHA',
+          readMore: 'Read More'
+        },
+        {
+          id: 'gpsr-implementation',
+          title: 'GPSR Implementation in the EU',
+          summary: 'The General Product Safety Regulation (GPSR) has come into force in the European Union. This new regulation will enhance consumer protection and raise product safety standards.',
+          date: 'December 10, 2024',
+          source: 'EU Trade Commission',
+          readMore: 'Read More'
+        },
+        {
+          id: 'kkdik-registrations',
+          title: 'KKDIK Registrations and Expectations',
+          summary: 'KKDIK registration processes are accelerating in Turkey. Deadlines for companies to fulfill their registration obligations are approaching. Professional consulting services are critical.',
+          date: 'December 5, 2024',
+          source: 'Ministry of Environment and Urbanization',
+          readMore: 'Read More'
+        }
+      ]
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -871,6 +987,34 @@ export const translations: Record<Language, Translations> = {
         message: 'Message',
         send: 'Send',
         success: 'Your message has been sent successfully.'
+      },
+      quoteForm: {
+        title: 'Quote Form',
+        subtitle: 'Fill out the form to get a service quote',
+        name: 'Full Name',
+        email: 'Email',
+        company: 'Company',
+        service: 'Select Service',
+        message: 'Message',
+        send: 'Send Quote',
+        success: 'Your quote request has been sent successfully.',
+        services: {
+          gpsr: 'GPSR Compliance',
+          epr: 'EPR & Packaging',
+          weee: 'WEEE',
+          battery: 'Battery Directive',
+          espr: 'ESPR',
+          kkdik: 'KKDIK Compliance',
+          reach: 'REACH Compliance',
+          biocidal: 'Biocidal Product Licensing',
+          sds: 'SDS Preparation',
+          labor: 'Labor Law',
+          commercial: 'Commercial Law',
+          regulatory: 'Regulatory Management',
+          gdpr: 'GDPR Compliance',
+          kvkk: 'KVKK Compliance',
+          c2c: 'Cradle to Cradle'
+        }
       }
     },
     footer: {
@@ -1116,7 +1260,33 @@ export const translations: Record<Language, Translations> = {
       title: 'Nachrichten',
       subtitle: 'Neueste Nachrichten',
       comingSoon: 'Bald Verfügbar',
-      description: 'Die neuesten Nachrichten und Ankündigungen von Pier Compliance.'
+      description: 'Die neuesten Nachrichten und Ankündigungen von Pier Compliance.',
+      articles: [
+        {
+          id: 'biocidal-fee-increase',
+          title: 'Biozid-Gebührenerhöhung',
+          summary: 'ECHA hat eine Gebührenerhöhung für Biozid-Produkte aufgrund der Inflation angekündigt. Diese Erhöhung wird die Biozid-Produktlizenzierungsprozesse beeinflussen und die Kosten für Unternehmen erhöhen.',
+          date: '15. Dezember 2024',
+          source: 'ECHA',
+          readMore: 'Weiterlesen'
+        },
+        {
+          id: 'gpsr-implementation',
+          title: 'GPSR-Implementierung in der EU',
+          summary: 'Die Allgemeine Produktsicherheitsverordnung (GPSR) ist in der Europäischen Union in Kraft getreten. Diese neue Verordnung wird den Verbraucherschutz verbessern und die Produktsicherheitsstandards erhöhen.',
+          date: '10. Dezember 2024',
+          source: 'EU-Handelskommission',
+          readMore: 'Weiterlesen'
+        },
+        {
+          id: 'kkdik-registrations',
+          title: 'KKDIK-Registrierungen und Erwartungen',
+          summary: 'Die KKDIK-Registrierungsprozesse beschleunigen sich in der Türkei. Die Fristen für Unternehmen, ihre Registrierungspflichten zu erfüllen, nähern sich. Professionelle Beratungsdienste sind kritisch.',
+          date: '5. Dezember 2024',
+          source: 'Ministerium für Umwelt und Urbanisierung',
+          readMore: 'Weiterlesen'
+        }
+      ]
     },
     faq: {
       title: 'Häufig Gestellte Fragen',
@@ -1194,6 +1364,34 @@ export const translations: Record<Language, Translations> = {
         message: 'Nachricht',
         send: 'Senden',
         success: 'Ihre Nachricht wurde erfolgreich gesendet.'
+      },
+      quoteForm: {
+        title: 'Angebotsformular',
+        subtitle: 'Füllen Sie das Formular aus, um ein Dienstleistungsangebot zu erhalten',
+        name: 'Vollständiger Name',
+        email: 'E-Mail',
+        company: 'Unternehmen',
+        service: 'Dienstleistung auswählen',
+        message: 'Nachricht',
+        send: 'Angebot senden',
+        success: 'Ihr Angebotsantrag wurde erfolgreich gesendet.',
+        services: {
+          gpsr: 'GPSR Compliance',
+          epr: 'EPR & Verpackung',
+          weee: 'WEEE',
+          battery: 'Batterie-Richtlinie',
+          espr: 'ESPR',
+          kkdik: 'KKDIK Compliance',
+          reach: 'REACH Compliance',
+          biocidal: 'Biozid-Produktlizenzierung',
+          sds: 'SDS-Vorbereitung',
+          labor: 'Arbeitsrecht',
+          commercial: 'Handelsrecht',
+          regulatory: 'Regulatorisches Management',
+          gdpr: 'GDPR Compliance',
+          kvkk: 'KVKK Compliance',
+          c2c: 'Cradle to Cradle'
+        }
       }
     },
     footer: {

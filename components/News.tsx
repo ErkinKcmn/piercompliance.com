@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { Newspaper, Calendar, ArrowRight } from 'lucide-react'
+import { Newspaper, Calendar, ArrowRight, ExternalLink } from 'lucide-react'
 
 const News = () => {
   const { language } = useLanguage()
@@ -26,6 +26,37 @@ const News = () => {
           </p>
         </div>
 
+        {/* News Articles */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {t.news.articles.map((article) => (
+            <div key={article.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-gray-500">{article.date}</span>
+                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                    {article.source}
+                  </span>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                  {article.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {article.summary}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <button className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                    {article.readMore}
+                    <ExternalLink className="w-4 h-4 ml-1" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Coming Soon Section */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-12 text-center">
@@ -47,46 +78,6 @@ const News = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
-        </div>
-
-        {/* Placeholder for future news */}
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* This section will be populated with actual news content in the future */}
-          <div className="bg-gray-50 rounded-lg p-6 text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Newspaper className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              {t.news.comingSoon}
-            </h3>
-            <p className="text-gray-600 text-sm">
-              {t.news.description}
-            </p>
-          </div>
-          
-          <div className="bg-gray-50 rounded-lg p-6 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Calendar className="w-8 h-8 text-green-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              {t.news.comingSoon}
-            </h3>
-            <p className="text-gray-600 text-sm">
-              {t.news.description}
-            </p>
-          </div>
-          
-          <div className="bg-gray-50 rounded-lg p-6 text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <ArrowRight className="w-8 h-8 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              {t.news.comingSoon}
-            </h3>
-            <p className="text-gray-600 text-sm">
-              {t.news.description}
-            </p>
           </div>
         </div>
       </div>
