@@ -10,12 +10,30 @@ export interface Translations {
     contact: string
   }
   
+  // Header
+  header: {
+    companyName: string
+    tagline: string
+    language: string
+  }
+  
   // Hero Section
   hero: {
     title: string
     subtitle: string
     slogan: string
     cta: string
+    features: {
+      gpsr: string
+      kkdik: string
+      biocidal: string
+      legal: string
+    }
+    stats: {
+      experience: string
+      projects: string
+      satisfaction: string
+    }
   }
   
   // About Section
@@ -27,6 +45,21 @@ export interface Translations {
     vision: string
     founders: string
     experience: string
+    expertise: {
+      team: string
+      trackRecord: string
+      recognition: string
+    }
+    values: {
+      excellence: string
+      integrity: string
+      innovation: string
+      trust: string
+      excellenceDesc: string
+      integrityDesc: string
+      innovationDesc: string
+      trustDesc: string
+    }
   }
   
   // Services
@@ -94,6 +127,12 @@ export interface Translations {
       description: string
       features: string[]
     }
+    cta: {
+      title: string
+      description: string
+      getQuote: string
+      contactUs: string
+    }
   }
   
   // FAQ
@@ -104,6 +143,27 @@ export interface Translations {
       question: string
       answer: string
     }>
+    cta: {
+      title: string
+      description: string
+      callNow: string
+      sendEmail: string
+    }
+    relatedTopics: {
+      title: string
+      gpsr: {
+        title: string
+        description: string
+      }
+      kkdik: {
+        title: string
+        description: string
+      }
+      biocidal: {
+        title: string
+        description: string
+      }
+    }
   }
   
   // Contact
@@ -113,17 +173,37 @@ export interface Translations {
     address: string
     phone: string
     email: string
+    getInTouch: string
+    description: string
+    businessHours: {
+      title: string
+      weekdays: string
+      saturday: string
+      sunday: string
+    }
+    whyChooseUs: {
+      title: string
+      expertTeam: string
+      experience: string
+      projects: string
+      personalized: string
+    }
     form: {
+      title: string
       name: string
       email: string
       company: string
       message: string
       send: string
+      success: string
     }
   }
   
   // Footer
   footer: {
+    description: string
+    quickLinks: string
+    ourServices: string
     rights: string
     privacy: string
     terms: string
@@ -135,6 +215,7 @@ export interface Translations {
     getQuote: string
     contactUs: string
     readMore: string
+    keyFeatures: string
   }
 }
 
@@ -147,11 +228,27 @@ export const translations: Record<Language, Translations> = {
       faq: 'SSS',
       contact: 'İletişim'
     },
+    header: {
+      companyName: 'Pier Compliance',
+      tagline: 'Ürün Güvenliği ve Düzenleyici Uyumluluk Uzmanı',
+      language: 'Türkçe'
+    },
     hero: {
       title: 'Profesyonel Uyumluluk Yönetimi',
       subtitle: 'Ürün güvenliği ve düzenleyici uyumluluk konularında uzman danışmanlık',
       slogan: 'Güvenilir Uyumluluk, Sürdürülebilir Gelecek',
-      cta: 'Hizmetlerimizi Keşfedin'
+      cta: 'Hizmetlerimizi Keşfedin',
+      features: {
+        gpsr: 'GPSR Uyumluluğu',
+        kkdik: 'KKDIK Uyumluluğu',
+        biocidal: 'Biyosidal Ürün Lisanslama',
+        legal: 'Hukuki Danışmanlık'
+      },
+      stats: {
+        experience: '10+ Yıllık Deneyim',
+        projects: '100+ Proje',
+        satisfaction: '100% Memnuniyet'
+      }
     },
     about: {
       title: 'Pier Compliance Hakkında',
@@ -160,7 +257,22 @@ export const translations: Record<Language, Translations> = {
       mission: 'Müşterilerimizin düzenleyici gereksinimleri karşısında güvenle hareket etmelerini sağlamak ve sürdürülebilir iş modelleri geliştirmelerine yardımcı olmak.',
       vision: 'Türkiye ve Avrupa\'da ürün güvenliği ve düzenleyici uyumluluk alanında lider danışmanlık firması olmak.',
       founders: 'Kurucularımız',
-      experience: 'Yıllık Deneyim'
+      experience: 'Yıllık Deneyim',
+      expertise: {
+        team: 'Deneyimli Ekip',
+        trackRecord: 'Güçlü İz',
+        recognition: 'Yerli ve Uluslararası Yerler'
+      },
+      values: {
+        excellence: 'Mükemmellik',
+        integrity: 'İnançlılık',
+        innovation: 'İnovasyon',
+        trust: 'Güven',
+        excellenceDesc: 'Sürekli iyileştirme ve en yüksek standartlara ulaşma.',
+        integrityDesc: 'Güvenilir ve adil davranma, müşteri memnuniyetini öncelikli hale getirme.',
+        innovationDesc: 'Yeni fikirler ve teknolojilerle dünyayı değiştirme.',
+        trustDesc: 'Müşteri memnuniyeti ve güvenimizin temelidir.'
+      }
     },
     services: {
       title: 'Hizmetlerimiz',
@@ -285,6 +397,12 @@ export const translations: Record<Language, Translations> = {
           'Uyumluluk takibi',
           'Risk yönetimi'
         ]
+      },
+      cta: {
+        title: 'Hizmetlerimizi Keşfedin',
+        description: 'Ürün güvenliği ve düzenleyici uyumluluk konularında uzman danışmanlık hizmetlerimizi keşfedin.',
+        getQuote: 'Teklif Al',
+        contactUs: 'İletişime Geç'
       }
     },
     faq: {
@@ -311,7 +429,28 @@ export const translations: Record<Language, Translations> = {
           question: 'Biyosidal ürün lisansı nasıl alınır?',
           answer: 'Biyosidal ürün lisansı için kapsamlı güvenlik değerlendirmesi, toksikoloji çalışmaları ve çevresel etki analizi gereklidir. Süreç 12-24 ay sürebilir.'
         }
-      ]
+      ],
+      cta: {
+        title: 'Düzenleyici Uyumluluk Hakkında Merak Edilenler',
+        description: 'Düzenleyici uyumluluk konularında merak ettiğiniz soruların yanıtlarını bulun.',
+        callNow: 'Şimdi Arayın',
+        sendEmail: 'E-posta Gönder'
+      },
+      relatedTopics: {
+        title: 'İlgili Konular',
+        gpsr: {
+          title: 'GPSR Uyumluluk',
+          description: 'Avrupa Birliği\'nde ürün güvenliği standartlarına uyumluluk sağlama ve risk değerlendirmesi.'
+        },
+        kkdik: {
+          title: 'KKDIK Uyumluluk',
+          description: 'Türkiye\'de kimyasal maddelerin güvenli kullanımı ve kayıt işlemleri.'
+        },
+        biocidal: {
+          title: 'Biyosidal Ürün Lisanslama',
+          description: 'Biyosidal ürünlerin güvenli kullanımı için lisanslama ve kayıt işlemleri.'
+        }
+      }
     },
     contact: {
       title: 'İletişim',
@@ -319,15 +458,35 @@ export const translations: Record<Language, Translations> = {
       address: 'İstanbul, Türkiye',
       phone: '+90 532 509 77 58',
       email: 'info@piercompliance.com',
+      getInTouch: 'Bizimle İletişime Geçin',
+      description: 'Pier Compliance, ürün güvenliği ve düzenleyici uyumluluk konularında uzman danışmanlık hizmetleri sunuyor. Bizimle iletişime geçin ve size yardımcı olayım.',
+      businessHours: {
+        title: 'İş Saatleri',
+        weekdays: 'Pazartesi - Cuma: 09:00 - 18:00',
+        saturday: 'Cumartesi: 10:00 - 14:00',
+        sunday: 'Pazar: Kapalı'
+      },
+      whyChooseUs: {
+        title: 'Neden Pier Compliance\'i Seçmelisiniz?',
+        expertTeam: 'Deneyimli ve Uzman Ekip',
+        experience: '10+ Yıllık Deneyim',
+        projects: '100+ Proje',
+        personalized: 'Kişiselleştirilmiş Çözümler'
+      },
       form: {
+        title: 'İletişim Formu',
         name: 'Ad Soyad',
         email: 'E-posta',
         company: 'Şirket',
         message: 'Mesajınız',
-        send: 'Gönder'
+        send: 'Gönder',
+        success: 'Mesajınız başarıyla gönderildi.'
       }
     },
     footer: {
+      description: 'Pier Compliance, ürün güvenliği ve düzenleyici uyumluluk konularında uzman danışmanlık hizmetleri sunuyor. Bizimle iletişime geçin ve size yardımcı olayım.',
+      quickLinks: 'Hızlı Linkler',
+      ourServices: 'Hizmetlerimiz',
       rights: 'Tüm hakları saklıdır.',
       privacy: 'Gizlilik Politikası',
       terms: 'Kullanım Şartları'
@@ -336,7 +495,8 @@ export const translations: Record<Language, Translations> = {
       learnMore: 'Daha Fazla Bilgi',
       getQuote: 'Teklif Al',
       contactUs: 'İletişime Geç',
-      readMore: 'Devamını Oku'
+      readMore: 'Devamını Oku',
+      keyFeatures: 'Ana Özellikler'
     }
   },
   en: {
@@ -347,11 +507,27 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       contact: 'Contact'
     },
+    header: {
+      companyName: 'Pier Compliance',
+      tagline: 'Product Safety and Regulatory Compliance Expert',
+      language: 'English'
+    },
     hero: {
       title: 'Professional Compliance Management',
       subtitle: 'Expert consulting in product safety and regulatory compliance',
       slogan: 'Reliable Compliance, Sustainable Future',
-      cta: 'Explore Our Services'
+      cta: 'Explore Our Services',
+      features: {
+        gpsr: 'GPSR Compliance',
+        kkdik: 'KKDIK Compliance',
+        biocidal: 'Biocidal Product Licensing',
+        legal: 'Legal Consulting'
+      },
+      stats: {
+        experience: '10+ Years Experience',
+        projects: '100+ Projects',
+        satisfaction: '100% Satisfaction'
+      }
     },
     about: {
       title: 'About Pier Compliance',
@@ -360,7 +536,22 @@ export const translations: Record<Language, Translations> = {
       mission: 'To ensure our clients can operate confidently in the face of regulatory requirements and help them develop sustainable business models.',
       vision: 'To become the leading consulting firm in product safety and regulatory compliance in Turkey and Europe.',
       founders: 'Our Founders',
-      experience: 'Years of Experience'
+      experience: 'Years of Experience',
+      expertise: {
+        team: 'Experienced Team',
+        trackRecord: 'Strong Track Record',
+        recognition: 'Local and International Recognition'
+      },
+      values: {
+        excellence: 'Excellence',
+        integrity: 'Integrity',
+        innovation: 'Innovation',
+        trust: 'Trust',
+        excellenceDesc: 'Continuous improvement and achieving the highest standards.',
+        integrityDesc: 'Trustworthy and fair behavior, prioritizing customer satisfaction.',
+        innovationDesc: 'Changing the world with new ideas and technologies.',
+        trustDesc: 'Customer satisfaction and our foundation.'
+      }
     },
     services: {
       title: 'Our Services',
@@ -485,6 +676,12 @@ export const translations: Record<Language, Translations> = {
           'Compliance monitoring',
           'Risk management'
         ]
+      },
+      cta: {
+        title: 'Explore Our Services',
+        description: 'Explore our expert consulting services in product safety and regulatory compliance.',
+        getQuote: 'Get Quote',
+        contactUs: 'Contact Us'
       }
     },
     faq: {
@@ -511,7 +708,28 @@ export const translations: Record<Language, Translations> = {
           question: 'How to obtain biocidal product license?',
           answer: 'Biocidal product license requires comprehensive safety assessment, toxicology studies, and environmental impact analysis. The process can take 12-24 months.'
         }
-      ]
+      ],
+      cta: {
+        title: 'Common Questions About Regulatory Compliance',
+        description: 'Find answers to common questions about regulatory compliance.',
+        callNow: 'Call Now',
+        sendEmail: 'Send Email'
+      },
+      relatedTopics: {
+        title: 'Related Topics',
+        gpsr: {
+          title: 'GPSR Compliance',
+          description: 'Ensuring compliance with product safety standards in the European Union and risk assessment.'
+        },
+        kkdik: {
+          title: 'KKDIK Compliance',
+          description: 'Safe use of chemical substances and registration procedures in Turkey.'
+        },
+        biocidal: {
+          title: 'Biocidal Product Licensing',
+          description: 'Licensing and registration procedures for safe use of biocidal products.'
+        }
+      }
     },
     contact: {
       title: 'Contact',
@@ -519,15 +737,35 @@ export const translations: Record<Language, Translations> = {
       address: 'Istanbul, Turkey',
       phone: '+90 532 509 77 58',
       email: 'info@piercompliance.com',
+      getInTouch: 'Get in Touch with Us',
+      description: 'Pier Compliance provides expert consulting services in product safety and regulatory compliance. Get in touch with us and we will help you.',
+      businessHours: {
+        title: 'Business Hours',
+        weekdays: 'Monday - Friday: 09:00 - 18:00',
+        saturday: 'Saturday: 10:00 - 14:00',
+        sunday: 'Sunday: Closed'
+      },
+      whyChooseUs: {
+        title: 'Why Choose Pier Compliance?',
+        expertTeam: 'Experienced and Expert Team',
+        experience: '10+ Years Experience',
+        projects: '100+ Projects',
+        personalized: 'Personalized Solutions'
+      },
       form: {
+        title: 'Contact Form',
         name: 'Full Name',
         email: 'Email',
         company: 'Company',
         message: 'Message',
-        send: 'Send'
+        send: 'Send',
+        success: 'Your message has been sent successfully.'
       }
     },
     footer: {
+      description: 'Pier Compliance provides expert consulting services in product safety and regulatory compliance. Get in touch with us and we will help you.',
+      quickLinks: 'Quick Links',
+      ourServices: 'Our Services',
       rights: 'All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service'
@@ -536,7 +774,8 @@ export const translations: Record<Language, Translations> = {
       learnMore: 'Learn More',
       getQuote: 'Get Quote',
       contactUs: 'Contact Us',
-      readMore: 'Read More'
+      readMore: 'Read More',
+      keyFeatures: 'Key Features'
     }
   },
   de: {
@@ -547,11 +786,27 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       contact: 'Kontakt'
     },
+    header: {
+      companyName: 'Pier Compliance',
+      tagline: 'Produktsicherheit und regulatorische Compliance Experte',
+      language: 'Deutsch'
+    },
     hero: {
       title: 'Professionelles Compliance Management',
       subtitle: 'Expertenberatung in Produktsicherheit und regulatorischer Compliance',
       slogan: 'Zuverlässige Compliance, Nachhaltige Zukunft',
-      cta: 'Unsere Dienstleistungen Entdecken'
+      cta: 'Unsere Dienstleistungen Entdecken',
+      features: {
+        gpsr: 'GPSR Compliance',
+        kkdik: 'KKDIK Compliance',
+        biocidal: 'Biozid-Produktlizenzierung',
+        legal: 'Rechtliche Beratung'
+      },
+      stats: {
+        experience: '10+ Jahre Erfahrung',
+        projects: '100+ Projekte',
+        satisfaction: '100% Zufriedenheit'
+      }
     },
     about: {
       title: 'Über Pier Compliance',
@@ -560,7 +815,22 @@ export const translations: Record<Language, Translations> = {
       mission: 'Sicherzustellen, dass unsere Kunden sicher im Angesicht regulatorischer Anforderungen operieren können und ihnen zu helfen, nachhaltige Geschäftsmodelle zu entwickeln.',
       vision: 'Die führende Beratungsfirma für Produktsicherheit und regulatorische Compliance in der Türkei und Europa zu werden.',
       founders: 'Unsere Gründer',
-      experience: 'Jahre Erfahrung'
+      experience: 'Jahre Erfahrung',
+      expertise: {
+        team: 'Experten-Team',
+        trackRecord: 'Starkes Verfolgungsvermögen',
+        recognition: 'Lokale und Internationale Anerkennung'
+      },
+      values: {
+        excellence: 'Exzellenz',
+        integrity: 'Integrität',
+        innovation: 'Innovation',
+        trust: 'Vertrauen',
+        excellenceDesc: 'Kontinuierliche Verbesserung und Erreichung der höchsten Standards.',
+        integrityDesc: 'Vertrauenswürdiges und ehrlich verhalten, Kundenzufriedenheit im Vordergrund.',
+        innovationDesc: 'Änderung der Welt mit neuen Ideen und Technologien.',
+        trustDesc: 'Kundenzufriedenheit und unser Fundament.'
+      }
     },
     services: {
       title: 'Unsere Dienstleistungen',
@@ -685,6 +955,12 @@ export const translations: Record<Language, Translations> = {
           'Compliance-Überwachung',
           'Risikomanagement'
         ]
+      },
+      cta: {
+        title: 'Unsere Dienstleistungen Entdecken',
+        description: 'Entdecken Sie unsere Expertenberatungsdienste in Produktsicherheit und regulatorischer Compliance.',
+        getQuote: 'Angebot Anfordern',
+        contactUs: 'Kontakt Aufnehmen'
       }
     },
     faq: {
@@ -711,7 +987,28 @@ export const translations: Record<Language, Translations> = {
           question: 'Wie erhält man eine Biozid-Produktlizenz?',
           answer: 'Die Biozid-Produktlizenz erfordert umfassende Sicherheitsbewertung, toxikologische Studien und Umweltverträglichkeitsanalyse. Der Prozess kann 12-24 Monate dauern.'
         }
-      ]
+      ],
+      cta: {
+        title: 'Häufige Fragen zur Regulatorischen Compliance',
+        description: 'Finden Sie Antworten auf häufig gestellte Fragen zur regulatorischen Compliance.',
+        callNow: 'Jetzt Anrufen',
+        sendEmail: 'E-Mail senden'
+      },
+      relatedTopics: {
+        title: 'Verwandte Themen',
+        gpsr: {
+          title: 'GPSR Compliance',
+          description: 'Sicherstellung der Compliance mit Produktsicherheitsstandards in der Europäischen Union und Risikobewertung.'
+        },
+        kkdik: {
+          title: 'KKDIK Compliance',
+          description: 'Sichere Verwendung chemischer Stoffe und Registrierungsverfahren in der Türkei.'
+        },
+        biocidal: {
+          title: 'Biozid-Produktlizenzierung',
+          description: 'Lizenzierungs- und Registrierungsverfahren für die sichere Verwendung von Biozid-Produkten.'
+        }
+      }
     },
     contact: {
       title: 'Kontakt',
@@ -719,15 +1016,35 @@ export const translations: Record<Language, Translations> = {
       address: 'Istanbul, Türkei',
       phone: '+90 532 509 77 58',
       email: 'info@piercompliance.com',
+      getInTouch: 'Nehmen Sie Kontakt mit uns auf',
+      description: 'Pier Compliance bietet Expertenberatungsdienste in Produktsicherheit und regulatorischer Compliance. Nehmen Sie Kontakt mit uns auf und wir helfen Ihnen.',
+      businessHours: {
+        title: 'Geschäftszeiten',
+        weekdays: 'Montag - Freitag: 09:00 - 18:00',
+        saturday: 'Samstag: 10:00 - 14:00',
+        sunday: 'Sonntag: Geschlossen'
+      },
+      whyChooseUs: {
+        title: 'Warum wählen Sie Pier Compliance?',
+        expertTeam: 'Experten-Team',
+        experience: '10+ Jahre Erfahrung',
+        projects: '100+ Projekte',
+        personalized: 'Persönliche Lösungen'
+      },
       form: {
+        title: 'Kontaktformular',
         name: 'Vollständiger Name',
         email: 'E-Mail',
         company: 'Unternehmen',
         message: 'Nachricht',
-        send: 'Senden'
+        send: 'Senden',
+        success: 'Ihre Nachricht wurde erfolgreich gesendet.'
       }
     },
     footer: {
+      description: 'Pier Compliance bietet Expertenberatungsdienste in Produktsicherheit und regulatorischer Compliance. Nehmen Sie Kontakt mit uns auf und wir helfen Ihnen.',
+      quickLinks: 'Schnelle Links',
+      ourServices: 'Unsere Dienstleistungen',
       rights: 'Alle Rechte vorbehalten.',
       privacy: 'Datenschutzrichtlinie',
       terms: 'Nutzungsbedingungen'
@@ -736,7 +1053,8 @@ export const translations: Record<Language, Translations> = {
       learnMore: 'Mehr Erfahren',
       getQuote: 'Angebot Anfordern',
       contactUs: 'Kontakt Aufnehmen',
-      readMore: 'Weiterlesen'
+      readMore: 'Weiterlesen',
+      keyFeatures: 'Wichtige Merkmale'
     }
   }
 }

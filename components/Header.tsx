@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { Menu, X, Globe, ChevronDown } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown, Scale, Beaker } from 'lucide-react'
 import Link from 'next/link'
 
 const Header = () => {
@@ -27,12 +27,17 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center relative overflow-hidden">
+                {/* Engineering/Technical element */}
+                <Beaker className="w-4 h-4 text-white absolute top-1 left-1" />
+                {/* Legal element */}
+                <Scale className="w-4 h-4 text-white absolute bottom-1 right-1" />
+                {/* Pier text */}
+                <span className="text-white font-bold text-xs relative z-10">Pier</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Pier Compliance</h1>
-                <p className="text-xs text-gray-600">Regulatory Excellence</p>
+                <h1 className="text-xl font-bold text-gray-900">{t.header.companyName}</h1>
+                <p className="text-xs text-gray-600">{t.header.tagline}</p>
               </div>
             </Link>
           </div>
@@ -143,7 +148,7 @@ const Header = () => {
               {/* Mobile Language Switcher */}
               <div className="border-t pt-2">
                 <div className="px-3 py-2 text-sm font-medium text-gray-500">
-                  Language / Dil / Sprache
+                  {t.header.language}
                 </div>
                 {languages.map((lang) => (
                   <button

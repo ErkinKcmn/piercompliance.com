@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium">
                 <Shield className="w-4 h-4 mr-2" />
-                Professional Compliance Services
+                {t.hero.features.gpsr}
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
@@ -41,19 +41,19 @@ const Hero = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">GPSR & ESPR Compliance</span>
+                <span className="text-gray-700">{t.hero.features.gpsr}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">KKDIK & REACH Services</span>
+                <span className="text-gray-700">{t.hero.features.kkdik}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">Biocidal Registration</span>
+                <span className="text-gray-700">{t.hero.features.biocidal}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">Legal Consulting</span>
+                <span className="text-gray-700">{t.hero.features.legal}</span>
               </div>
             </div>
 
@@ -76,18 +76,20 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">15+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-sm text-gray-600">{t.hero.stats.experience}</div>
               </div>
+              
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">500+</div>
-                <div className="text-sm text-gray-600">Projects Completed</div>
+                <div className="text-sm text-gray-600">{t.hero.stats.projects}</div>
               </div>
+              
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">100%</div>
-                <div className="text-sm text-gray-600">Client Satisfaction</div>
+                <div className="text-sm text-gray-600">{t.hero.stats.satisfaction}</div>
               </div>
             </div>
           </div>
@@ -102,34 +104,34 @@ const Hero = () => {
                       <Shield className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold">Regulatory Excellence</h3>
-                      <p className="text-blue-100">Comprehensive compliance solutions</p>
+                      <h3 className="text-xl font-semibold">{t.hero.features.gpsr}</h3>
+                      <p className="text-blue-100">{t.hero.subtitle}</p>
                     </div>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-300" />
-                      <span>GPSR & ESPR Compliance</span>
+                      <span>{t.hero.features.gpsr}</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-300" />
-                      <span>KKDIK & REACH Services</span>
+                      <span>{t.hero.features.kkdik}</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-300" />
-                      <span>Biocidal Registration</span>
+                      <span>{t.hero.features.biocidal}</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-300" />
-                      <span>Legal Consulting</span>
+                      <span>{t.hero.features.legal}</span>
                     </div>
                   </div>
                   
                   <div className="pt-4">
                     <div className="flex items-center space-x-2">
                       <Users className="w-5 h-5" />
-                      <span className="text-sm">Expert team of engineers and lawyers</span>
+                      <span className="text-sm">{t.about.expertise.team}</span>
                     </div>
                   </div>
                 </div>

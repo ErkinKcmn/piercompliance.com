@@ -72,22 +72,22 @@ const FAQ = () => {
 
         {/* Additional Information */}
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
+          <h3 className="text-2xl font-bold mb-4">{t.faq.cta.title}</h3>
           <p className="text-lg mb-6 opacity-90">
-            Our expert team is here to help you understand complex regulatory requirements and find the right compliance solutions for your business.
+            {t.faq.cta.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${t.contact.phone}`}
               className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
-              Call Us Now
+              {t.faq.cta.callNow}
             </a>
             <a
               href={`mailto:${t.contact.email}`}
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Send Email
+              {t.faq.cta.sendEmail}
             </a>
           </div>
         </div>
@@ -95,27 +95,27 @@ const FAQ = () => {
         {/* Related Topics */}
         <div className="mt-16">
           <h3 className="text-2xl font-semibold text-gray-900 text-center mb-8">
-            Related Topics
+            {t.faq.relatedTopics.title}
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="font-semibold text-gray-900 mb-2">GPSR Compliance</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.faq.relatedTopics.gpsr.title}</h4>
               <p className="text-gray-600 text-sm">
-                Learn about General Product Safety Regulation requirements and how to ensure your products meet EU safety standards.
+                {t.faq.relatedTopics.gpsr.description}
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="font-semibold text-gray-900 mb-2">KKDIK Registration</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.faq.relatedTopics.kkdik.title}</h4>
               <p className="text-gray-600 text-sm">
-                Understand Turkey's chemical registration requirements and the KKDIK regulation process.
+                {t.faq.relatedTopics.kkdik.description}
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="font-semibold text-gray-900 mb-2">Biocidal Products</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.faq.relatedTopics.biocidal.title}</h4>
               <p className="text-gray-600 text-sm">
-                Get guidance on biocidal product authorization and compliance with EU regulations.
+                {t.faq.relatedTopics.biocidal.description}
               </p>
             </div>
           </div>

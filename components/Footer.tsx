@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Scale, Beaker } from 'lucide-react'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -16,17 +16,22 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center relative overflow-hidden">
+                {/* Engineering/Technical element */}
+                <Beaker className="w-4 h-4 text-white absolute top-1 left-1" />
+                {/* Legal element */}
+                <Scale className="w-4 h-4 text-white absolute bottom-1 right-1" />
+                {/* Pier text */}
+                <span className="text-white font-bold text-xs relative z-10">Pier</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Pier Compliance</h3>
-                <p className="text-sm text-gray-400">Regulatory Excellence</p>
+                <h3 className="text-xl font-bold">{t.header.companyName}</h3>
+                <p className="text-sm text-gray-400">{t.header.tagline}</p>
               </div>
             </div>
             
             <p className="text-gray-300 mb-6 max-w-md">
-              Professional regulatory compliance consulting services for GPSR, ESPR, KKDIK, REACH, and Biocidal regulations. Expert team of engineers and lawyers.
+              {t.footer.description}
             </p>
             
             <div className="space-y-3">
@@ -51,7 +56,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors">
@@ -83,31 +88,31 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.ourServices}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/services#gpsr" className="text-gray-300 hover:text-white transition-colors">
-                  GPSR Compliance
+                  {t.services.gpsr.title}
                 </Link>
               </li>
               <li>
                 <Link href="/services#kkdik" className="text-gray-300 hover:text-white transition-colors">
-                  KKDIK & REACH
+                  {t.services.kkdik.title}
                 </Link>
               </li>
               <li>
                 <Link href="/services#biocidal" className="text-gray-300 hover:text-white transition-colors">
-                  Biocidal Registration
+                  {t.services.biocidal.title}
                 </Link>
               </li>
               <li>
                 <Link href="/services#sds" className="text-gray-300 hover:text-white transition-colors">
-                  SDS Preparation
+                  {t.services.sds.title}
                 </Link>
               </li>
               <li>
-                <Link href="/services#legal" className="text-gray-300 hover:text-white transition-colors">
-                  Legal Consulting
+                <Link href="/services#labor" className="text-gray-300 hover:text-white transition-colors">
+                  {t.services.labor.title}
                 </Link>
               </li>
             </ul>
@@ -118,7 +123,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Pier Compliance. {t.footer.rights}
+              © 2024 {t.header.companyName}. {t.footer.rights}
             </div>
             
             <div className="flex items-center space-x-6">

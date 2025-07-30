@@ -37,7 +37,7 @@ const About = () => {
               <div className="bg-blue-50 p-6 rounded-lg">
                 <div className="flex items-center space-x-3 mb-3">
                   <Award className="w-6 h-6 text-blue-600" />
-                  <h4 className="font-semibold text-gray-900">Mission</h4>
+                  <h4 className="font-semibold text-gray-900">{t.about.values.excellence}</h4>
                 </div>
                 <p className="text-gray-700 text-sm">
                   {t.about.mission}
@@ -47,7 +47,7 @@ const About = () => {
               <div className="bg-green-50 p-6 rounded-lg">
                 <div className="flex items-center space-x-3 mb-3">
                   <Target className="w-6 h-6 text-green-600" />
-                  <h4 className="font-semibold text-gray-900">Vision</h4>
+                  <h4 className="font-semibold text-gray-900">{t.about.values.trust}</h4>
                 </div>
                 <p className="text-gray-700 text-sm">
                   {t.about.vision}
@@ -65,17 +65,17 @@ const About = () => {
             
             <div className="text-center p-6 bg-gray-100 rounded-lg">
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-sm text-gray-600">Projects Completed</div>
+              <div className="text-sm text-gray-600">{t.hero.stats.projects}</div>
             </div>
             
             <div className="text-center p-6 bg-gray-100 rounded-lg">
               <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
-              <div className="text-sm text-gray-600">Success Rate</div>
+              <div className="text-sm text-gray-600">{t.hero.stats.satisfaction}</div>
             </div>
             
             <div className="text-center p-6 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg text-white">
               <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-sm opacity-90">Support Available</div>
+              <div className="text-sm opacity-90">{t.contact.businessHours.title}</div>
             </div>
           </div>
         </div>
@@ -86,9 +86,9 @@ const About = () => {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="w-8 h-8 text-blue-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.about.expertise.team}</h3>
             <p className="text-gray-600">
-              Our team combines engineering expertise with legal knowledge to provide comprehensive compliance solutions.
+              {t.about.description}
             </p>
           </div>
           
@@ -96,9 +96,9 @@ const About = () => {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.about.expertise.trackRecord}</h3>
             <p className="text-gray-600">
-              Successfully completed hundreds of compliance projects across various industries and regulations.
+              {t.about.description}
             </p>
           </div>
           
@@ -106,47 +106,47 @@ const About = () => {
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="w-8 h-8 text-purple-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Industry Recognition</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.about.expertise.recognition}</h3>
             <p className="text-gray-600">
-              Recognized as a leading compliance consulting firm in Turkey and the European market.
+              {t.about.description}
             </p>
           </div>
         </div>
 
         {/* Values */}
         <div className="mt-16 bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-semibold text-gray-900 text-center mb-8">Our Core Values</h3>
+          <h3 className="text-2xl font-semibold text-gray-900 text-center mb-8">{t.about.values.excellence}</h3>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <CheckCircle className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Excellence</h4>
-              <p className="text-sm text-gray-600">Delivering the highest quality services</p>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.about.values.excellence}</h4>
+              <p className="text-sm text-gray-600">{t.about.values.excellenceDesc}</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Users className="w-6 h-6 text-green-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Integrity</h4>
-              <p className="text-sm text-gray-600">Maintaining ethical standards</p>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.about.values.integrity}</h4>
+              <p className="text-sm text-gray-600">{t.about.values.integrityDesc}</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Target className="w-6 h-6 text-purple-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Innovation</h4>
-              <p className="text-sm text-gray-600">Finding creative solutions</p>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.about.values.innovation}</h4>
+              <p className="text-sm text-gray-600">{t.about.values.innovationDesc}</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Award className="w-6 h-6 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Trust</h4>
-              <p className="text-sm text-gray-600">Building lasting relationships</p>
+              <h4 className="font-semibold text-gray-900 mb-2">{t.about.values.trust}</h4>
+              <p className="text-sm text-gray-600">{t.about.values.trustDesc}</p>
             </div>
           </div>
         </div>

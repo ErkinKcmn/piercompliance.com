@@ -52,10 +52,10 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Get in Touch
+                {t.contact.getInTouch}
               </h3>
               <p className="text-gray-600 mb-8">
-                Ready to discuss your compliance needs? Our expert team is here to help you navigate complex regulatory requirements and ensure your business stays compliant.
+                {t.contact.description}
               </p>
             </div>
 
@@ -65,7 +65,7 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Office Location</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t.contact.businessHours.title}</h4>
                   <p className="text-gray-600">{t.contact.address}</p>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t.contact.businessHours.title}</h4>
                   <a href={`tel:${t.contact.phone}`} className="text-gray-600 hover:text-blue-600 transition-colors">
                     {t.contact.phone}
                   </a>
@@ -87,7 +87,7 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t.contact.businessHours.title}</h4>
                   <a href={`mailto:${t.contact.email}`} className="text-gray-600 hover:text-blue-600 transition-colors">
                     {t.contact.email}
                   </a>
@@ -97,42 +97,39 @@ const Contact = () => {
 
             {/* Business Hours */}
             <div className="bg-gray-50 rounded-lg p-6">
-              <h4 className="font-semibold text-gray-900 mb-4">Business Hours</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">{t.contact.businessHours.title}</h4>
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span>{t.contact.businessHours.weekdays}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>10:00 AM - 2:00 PM</span>
+                  <span>{t.contact.businessHours.saturday}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
+                  <span>{t.contact.businessHours.sunday}</span>
                 </div>
               </div>
             </div>
 
             {/* Why Choose Us */}
             <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-lg p-6 text-white">
-              <h4 className="font-semibold mb-4">Why Choose Pier Compliance?</h4>
+              <h4 className="font-semibold mb-4">{t.contact.whyChooseUs.title}</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4" />
-                  <span>Expert team of engineers and lawyers</span>
+                  <span>{t.contact.whyChooseUs.expertTeam}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4" />
-                  <span>15+ years of regulatory experience</span>
+                  <span>{t.contact.whyChooseUs.experience}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4" />
-                  <span>500+ successful compliance projects</span>
+                  <span>{t.contact.whyChooseUs.projects}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4" />
-                  <span>Personalized service and support</span>
+                  <span>{t.contact.whyChooseUs.personalized}</span>
                 </li>
               </ul>
             </div>
@@ -141,13 +138,13 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-gray-50 rounded-2xl p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Send us a Message
+              {t.contact.form.title}
             </h3>
 
             {isSubmitted && (
               <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5" />
-                <span>Thank you! Your message has been sent successfully.</span>
+                <span>{t.contact.form.success}</span>
               </div>
             )}
 
@@ -164,7 +161,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Enter your full name"
+                  placeholder={t.contact.form.name}
                 />
               </div>
 
@@ -180,7 +177,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Enter your email address"
+                  placeholder={t.contact.form.email}
                 />
               </div>
 
@@ -195,7 +192,7 @@ const Contact = () => {
                   value={formData.company}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Enter your company name"
+                  placeholder={t.contact.form.company}
                 />
               </div>
 
@@ -211,7 +208,7 @@ const Contact = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Tell us about your compliance needs..."
+                  placeholder={t.contact.form.message}
                 />
               </div>
 

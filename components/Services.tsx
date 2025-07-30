@@ -147,7 +147,7 @@ const Services = () => {
                   
                   {isExpanded && (
                     <div className="mt-4 pt-4 border-t border-gray-200">
-                      <h4 className="font-medium text-gray-900 mb-3">Key Features:</h4>
+                      <h4 className="font-medium text-gray-900 mb-3">{t.common.keyFeatures}:</h4>
                       <ul className="space-y-2">
                         {service.service.features.map((feature, index) => (
                           <li key={index} className="flex items-start space-x-2">
@@ -167,16 +167,16 @@ const Services = () => {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <h3 className="text-2xl font-bold mb-4">{t.services.cta.title}</h3>
             <p className="text-lg mb-6 opacity-90">
-              Let our experts help you navigate the complex world of regulatory compliance.
+              {t.services.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                {t.common.getQuote}
+                {t.services.cta.getQuote}
               </button>
               <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
-                {t.common.contactUs}
+                {t.services.cta.contactUs}
               </button>
             </div>
           </div>
