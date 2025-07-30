@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Scale, Beaker } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -16,13 +16,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center relative overflow-hidden">
-                {/* Engineering/Technical element */}
-                <Beaker className="w-4 h-4 text-white absolute top-1 left-1" />
-                {/* Legal element */}
-                <Scale className="w-4 h-4 text-white absolute bottom-1 right-1" />
-                {/* Pier text */}
-                <span className="text-white font-bold text-xs relative z-10">Pier</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xs">Pier</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">{t.header.companyName}</h3>
@@ -74,8 +69,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">
-                  {t.nav.faq}
+                <Link href="/news" className="text-gray-300 hover:text-white transition-colors">
+                  {t.nav.news}
                 </Link>
               </li>
               <li>
@@ -136,14 +131,19 @@ const Footer = () => {
               
               {/* Social Links */}
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="https://www.linkedin.com/in/pier-compliance-4718b132a/?originalSubdomain=tr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="/" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Facebook className="w-5 h-5" />
                 </a>
               </div>
             </div>

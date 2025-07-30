@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { Menu, X, Globe, ChevronDown, Scale, Beaker } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
 const Header = () => {
@@ -27,13 +27,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center relative overflow-hidden">
-                {/* Engineering/Technical element */}
-                <Beaker className="w-4 h-4 text-white absolute top-1 left-1" />
-                {/* Legal element */}
-                <Scale className="w-4 h-4 text-white absolute bottom-1 right-1" />
-                {/* Pier text */}
-                <span className="text-white font-bold text-xs relative z-10">Pier</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xs">Pier</span>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">{t.header.companyName}</h1>
@@ -53,8 +48,8 @@ const Header = () => {
             <Link href="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               {t.nav.services}
             </Link>
-            <Link href="/faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              {t.nav.faq}
+            <Link href="/news" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              {t.nav.news}
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               {t.nav.contact}
@@ -131,11 +126,11 @@ const Header = () => {
                 {t.nav.services}
               </Link>
               <Link
-                href="/faq"
+                href="/news"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t.nav.faq}
+                {t.nav.news}
               </Link>
               <Link
                 href="/contact"

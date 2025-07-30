@@ -6,7 +6,7 @@ export interface Translations {
     home: string
     about: string
     services: string
-    faq: string
+    news: string
     contact: string
   }
   
@@ -127,12 +127,35 @@ export interface Translations {
       description: string
       features: string[]
     }
+    gdpr: {
+      title: string
+      description: string
+      features: string[]
+    }
+    kvkk: {
+      title: string
+      description: string
+      features: string[]
+    }
+    c2c: {
+      title: string
+      description: string
+      features: string[]
+    }
     cta: {
       title: string
       description: string
       getQuote: string
       contactUs: string
     }
+  }
+  
+  // News
+  news: {
+    title: string
+    subtitle: string
+    comingSoon: string
+    description: string
   }
   
   // FAQ
@@ -225,7 +248,7 @@ export const translations: Record<Language, Translations> = {
       home: 'Ana Sayfa',
       about: 'Hakkımızda',
       services: 'Hizmetler',
-      faq: 'SSS',
+      news: 'Haberler',
       contact: 'İletişim'
     },
     header: {
@@ -280,10 +303,12 @@ export const translations: Record<Language, Translations> = {
       overview: 'Ürün güvenliği ve düzenleyici uyumluluk konularında uzman danışmanlık hizmetleri sunuyoruz.',
       gpsr: {
         title: 'GPSR (Genel Ürün Güvenliği Yönetmeliği) Uyumluluğu',
-        description: 'Avrupa Birliği\'nde ürün güvenliği standartlarına uyumluluk sağlama ve risk değerlendirmesi.',
+        description: 'Avrupa Birliği\'nde ürün güvenliği standartlarına uyumluluk sağlama, risk değerlendirmesi ve ekonomik operatör yönetimi.',
         features: [
+          'Risk değerlendirmesi ve analizi',
+          'Ekonomik operatör yönetimi',
+          'KKDIK ilişkisi ve entegrasyonu',
           'Ürün güvenliği değerlendirmesi',
-          'Risk analizi ve yönetimi',
           'Uyumluluk raporları',
           'Piyasa gözetimi desteği'
         ]
@@ -330,9 +355,11 @@ export const translations: Record<Language, Translations> = {
       },
       kkdik: {
         title: 'KKDIK (Türkiye REACH Yönetmeliği) Uyumluluğu',
-        description: 'Türkiye\'de kimyasal maddelerin güvenli kullanımı ve kayıt işlemleri.',
+        description: 'Türkiye\'de kimyasal maddelerin güvenli kullanımı, kayıt işlemleri ve MBDF yönetimi.',
         features: [
           'KKDIK kayıt işlemleri',
+          'MBDF yönetimi ve ön kayıt',
+          'SEA ve ön-MBDF bildirimleri',
           'Kimyasal güvenlik değerlendirmesi',
           'Dosya hazırlama ve sunma',
           'Uyumluluk takibi'
@@ -340,9 +367,11 @@ export const translations: Record<Language, Translations> = {
       },
       reach: {
         title: 'REACH Uyumluluğu (AB)',
-        description: 'Avrupa Birliği\'nde kimyasal maddelerin kayıt, değerlendirme ve izin işlemleri.',
+        description: 'Avrupa Birliği\'nde kimyasal maddelerin kayıt, değerlendirme, izin işlemleri ve SIEF yönetimi.',
         features: [
           'REACH kayıt işlemleri',
+          'SIEF yönetimi',
+          'Declaration of Conformity',
           'Kimyasal güvenlik raporları',
           'İzin başvuruları',
           'Uyumluluk danışmanlığı'
@@ -390,12 +419,44 @@ export const translations: Record<Language, Translations> = {
       },
       regulatory: {
         title: 'Düzenleyici Yönetimi (Genel Bakış)',
-        description: 'Tüm düzenleyici gereksinimlerin kapsamlı yönetimi ve stratejik planlama.',
+        description: 'Tüm ürünler ve şirketler için departman kurmadan sunulan, güvence sağlayan kapsamlı düzenleyici yönetimi.',
         features: [
+          'Departman kurmadan hizmet',
           'Düzenleyici haritalama',
           'Stratejik planlama',
           'Uyumluluk takibi',
-          'Risk yönetimi'
+          'Risk yönetimi',
+          'Güvence sağlama'
+        ]
+      },
+      gdpr: {
+        title: 'GDPR Uyumluluğu',
+        description: 'Avrupa Genel Veri Koruma Yönetmeliği (GDPR) uyumluluğu ve risk değerlendirmesi.',
+        features: [
+          'GDPR uyumluluk değerlendirmesi',
+          'Risk analizi ve yönetimi',
+          'Düzenleme raporları',
+          'Uyumluluk takibi'
+        ]
+      },
+      kvkk: {
+        title: 'KVKK Uyumluluğu',
+        description: 'Türk Kimlik Kartı ve Kimlik Bilgileri Koruma Yasası (KVKK) uyumluluğu ve risk değerlendirmesi.',
+        features: [
+          'KVKK uyumluluk değerlendirmesi',
+          'Risk analizi ve yönetimi',
+          'Düzenleme raporları',
+          'Uyumluluk takibi'
+        ]
+      },
+      c2c: {
+        title: 'Cradle to Cradle (Çevre dostu tasarım)',
+        description: 'Ürünlerin çevre dostu tasarımı ve geri dönüşümü.',
+        features: [
+          'Çevre dostu tasarım değerlendirmesi',
+          'Geri dönüşüm stratejileri',
+          'Sürdürülebilirlik raporları',
+          'Uyumluluk stratejileri'
         ]
       },
       cta: {
@@ -404,6 +465,12 @@ export const translations: Record<Language, Translations> = {
         getQuote: 'Teklif Al',
         contactUs: 'İletişime Geç'
       }
+    },
+    news: {
+      title: 'Haberler',
+      subtitle: 'Son Haberler',
+      comingSoon: 'Yaklaşan Haberler',
+      description: 'Pier Compliance\'in son haberleri ve güncel duyuruları burada.'
     },
     faq: {
       title: 'Sık Sorulan Sorular',
@@ -504,7 +571,7 @@ export const translations: Record<Language, Translations> = {
       home: 'Home',
       about: 'About',
       services: 'Services',
-      faq: 'FAQ',
+      news: 'News',
       contact: 'Contact'
     },
     header: {
@@ -559,10 +626,12 @@ export const translations: Record<Language, Translations> = {
       overview: 'We provide expert consulting services in product safety and regulatory compliance.',
       gpsr: {
         title: 'GPSR (General Product Safety Regulation) Compliance',
-        description: 'Ensuring compliance with product safety standards in the European Union and risk assessment.',
+        description: 'Ensuring compliance with product safety standards in the European Union, risk assessment and economic operator management.',
         features: [
+          'Risk assessment and analysis',
+          'Economic operator management',
+          'KKDIK relationship and integration',
           'Product safety assessment',
-          'Risk analysis and management',
           'Compliance reporting',
           'Market surveillance support'
         ]
@@ -609,9 +678,11 @@ export const translations: Record<Language, Translations> = {
       },
       kkdik: {
         title: 'KKDIK (Turkey REACH Regulation) Compliance',
-        description: 'Safe use of chemical substances and registration procedures in Turkey.',
+        description: 'Safe use of chemical substances, registration procedures and MBDF management in Turkey.',
         features: [
           'KKDIK registration procedures',
+          'MBDF management and pre-registration',
+          'SEA and pre-MBDF notifications',
           'Chemical safety assessment',
           'Dossier preparation and submission',
           'Compliance monitoring'
@@ -619,9 +690,11 @@ export const translations: Record<Language, Translations> = {
       },
       reach: {
         title: 'REACH Compliance (EU)',
-        description: 'Registration, evaluation, and authorization of chemical substances in the European Union.',
+        description: 'Registration, evaluation, authorization of chemical substances and SIEF management in the European Union.',
         features: [
           'REACH registration procedures',
+          'SIEF management',
+          'Declaration of Conformity',
           'Chemical safety reports',
           'Authorization applications',
           'Compliance consulting'
@@ -669,12 +742,44 @@ export const translations: Record<Language, Translations> = {
       },
       regulatory: {
         title: 'Regulatory Management (Overview)',
-        description: 'Comprehensive management of all regulatory requirements and strategic planning.',
+        description: 'Comprehensive regulatory management provided without establishing departments for all products and companies, ensuring compliance.',
         features: [
+          'Service without department establishment',
           'Regulatory mapping',
           'Strategic planning',
           'Compliance monitoring',
-          'Risk management'
+          'Risk management',
+          'Assurance provision'
+        ]
+      },
+      gdpr: {
+        title: 'GDPR Compliance',
+        description: 'Compliance with the European General Data Protection Regulation (GDPR) and risk assessment.',
+        features: [
+          'GDPR compliance assessment',
+          'Risk analysis and management',
+          'Regulatory reports',
+          'Compliance monitoring'
+        ]
+      },
+      kvkk: {
+        title: 'KVKK Compliance',
+        description: 'Compliance with the Turkish Personal Data Protection Law (KVKK) and risk assessment.',
+        features: [
+          'KVKK compliance assessment',
+          'Risk analysis and management',
+          'Regulatory reports',
+          'Compliance monitoring'
+        ]
+      },
+      c2c: {
+        title: 'Cradle to Cradle (Environmentally Friendly Design)',
+        description: 'Environmentally friendly design of products and recycling.',
+        features: [
+          'Environmentally friendly design assessment',
+          'Recycling strategies',
+          'Sustainability reporting',
+          'Compliance strategies'
         ]
       },
       cta: {
@@ -683,6 +788,12 @@ export const translations: Record<Language, Translations> = {
         getQuote: 'Get Quote',
         contactUs: 'Contact Us'
       }
+    },
+    news: {
+      title: 'News',
+      subtitle: 'Latest News',
+      comingSoon: 'Coming Soon',
+      description: 'Latest news and announcements from Pier Compliance.'
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -783,7 +894,7 @@ export const translations: Record<Language, Translations> = {
       home: 'Startseite',
       about: 'Über uns',
       services: 'Dienstleistungen',
-      faq: 'FAQ',
+      news: 'Nachrichten',
       contact: 'Kontakt'
     },
     header: {
@@ -838,10 +949,12 @@ export const translations: Record<Language, Translations> = {
       overview: 'Wir bieten Expertenberatung in Produktsicherheit und regulatorischer Compliance.',
       gpsr: {
         title: 'GPSR (Allgemeine Produktsicherheitsverordnung) Compliance',
-        description: 'Sicherstellung der Compliance mit Produktsicherheitsstandards in der Europäischen Union und Risikobewertung.',
+        description: 'Sicherstellung der Compliance mit Produktsicherheitsstandards in der Europäischen Union, Risikobewertung und wirtschaftlicher Betreiberverwaltung.',
         features: [
+          'Risikobewertung und -analyse',
+          'Wirtschaftliche Betreiberverwaltung',
+          'KKDIK-Beziehung und -Integration',
           'Produktsicherheitsbewertung',
-          'Risikoanalyse und -management',
           'Compliance-Berichterstattung',
           'Marktüberwachungsunterstützung'
         ]
@@ -888,9 +1001,11 @@ export const translations: Record<Language, Translations> = {
       },
       kkdik: {
         title: 'KKDIK (Türkei REACH-Verordnung) Compliance',
-        description: 'Sichere Verwendung chemischer Stoffe und Registrierungsverfahren in der Türkei.',
+        description: 'Sichere Verwendung chemischer Stoffe, Registrierungsverfahren und MBDF-Management in der Türkei.',
         features: [
           'KKDIK-Registrierungsverfahren',
+          'MBDF-Management und Vorregistrierung',
+          'SEA und Vor-MBDF-Benachrichtigungen',
           'Chemische Sicherheitsbewertung',
           'Dossier-Erstellung und -Einreichung',
           'Compliance-Überwachung'
@@ -898,9 +1013,11 @@ export const translations: Record<Language, Translations> = {
       },
       reach: {
         title: 'REACH Compliance (EU)',
-        description: 'Registrierung, Bewertung und Zulassung chemischer Stoffe in der Europäischen Union.',
+        description: 'Registrierung, Bewertung, Zulassung chemischer Stoffe und SIEF-Management in der Europäischen Union.',
         features: [
           'REACH-Registrierungsverfahren',
+          'SIEF-Management',
+          'Konformitätserklärung',
           'Chemische Sicherheitsberichte',
           'Zulassungsanträge',
           'Compliance-Beratung'
@@ -948,12 +1065,44 @@ export const translations: Record<Language, Translations> = {
       },
       regulatory: {
         title: 'Regulatorisches Management (Überblick)',
-        description: 'Umfassendes Management aller regulatorischen Anforderungen und strategische Planung.',
+        description: 'Umfassendes regulatorisches Management ohne Abteilungsgründung für alle Produkte und Unternehmen, Compliance gewährleistend.',
         features: [
+          'Dienstleistung ohne Abteilungsgründung',
           'Regulatorische Kartierung',
           'Strategische Planung',
           'Compliance-Überwachung',
-          'Risikomanagement'
+          'Risikomanagement',
+          'Gewährleistung der Sicherheit'
+        ]
+      },
+      gdpr: {
+        title: 'GDPR Compliance',
+        description: 'Compliance mit dem Europäischen Allgemeinen Datenschutzgesetz (GDPR) und Risikobewertung.',
+        features: [
+          'GDPR-Compliance-Bewertung',
+          'Risikoanalyse und -management',
+          'Düzenungsberichte',
+          'Compliance-Überwachung'
+        ]
+      },
+      kvkk: {
+        title: 'KVKK Compliance',
+        description: 'Compliance mit dem Türkischen Personaldatenschutzgesetz (KVKK) und Risikobewertung.',
+        features: [
+          'KVKK-Compliance-Bewertung',
+          'Risikoanalyse und -management',
+          'Düzenungsberichte',
+          'Compliance-Überwachung'
+        ]
+      },
+      c2c: {
+        title: 'Cradle to Cradle (Umweltschonende Gestaltung)',
+        description: 'Umweltschonende Gestaltung von Produkten und Recycling.',
+        features: [
+          'Umweltschonende Gestaltungsanalyse',
+          'Wiederverwertungsstrategien',
+          'Nachhaltigkeitsberichterstattung',
+          'Compliance-Strategien'
         ]
       },
       cta: {
@@ -962,6 +1111,12 @@ export const translations: Record<Language, Translations> = {
         getQuote: 'Angebot Anfordern',
         contactUs: 'Kontakt Aufnehmen'
       }
+    },
+    news: {
+      title: 'Nachrichten',
+      subtitle: 'Neueste Nachrichten',
+      comingSoon: 'Bald Verfügbar',
+      description: 'Die neuesten Nachrichten und Ankündigungen von Pier Compliance.'
     },
     faq: {
       title: 'Häufig Gestellte Fragen',

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { ChevronDown, ChevronUp, Shield, FileText, Globe, Zap, Battery, Leaf, Beaker, Scale, Briefcase, Settings } from 'lucide-react'
+import { ChevronDown, ChevronUp, Shield, FileText, Globe, Zap, Battery, Leaf, Beaker, Scale, Briefcase, Settings, Lock, ShieldCheck, Recycle } from 'lucide-react'
 
 const Services = () => {
   const { language } = useLanguage()
@@ -82,6 +82,24 @@ const Services = () => {
       icon: Settings,
       color: 'purple',
       service: t.services.regulatory
+    },
+    {
+      id: 'gdpr',
+      icon: Lock,
+      color: 'indigo',
+      service: t.services.gdpr
+    },
+    {
+      id: 'kvkk',
+      icon: ShieldCheck,
+      color: 'green',
+      service: t.services.kvkk
+    },
+    {
+      id: 'c2c',
+      icon: Recycle,
+      color: 'teal',
+      service: t.services.c2c
     }
   ]
 
@@ -94,7 +112,8 @@ const Services = () => {
       purple: 'bg-purple-100 text-purple-600 hover:bg-purple-200',
       indigo: 'bg-indigo-100 text-indigo-600 hover:bg-indigo-200',
       red: 'bg-red-100 text-red-600 hover:bg-red-200',
-      gray: 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+      gray: 'bg-gray-100 text-gray-600 hover:bg-gray-200',
+      teal: 'bg-teal-100 text-teal-600 hover:bg-teal-200'
     }
     return colors[color as keyof typeof colors] || colors.blue
   }

@@ -26,8 +26,21 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent('Pier Compliance - Contact Form Submission')
+    const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Message: ${formData.message}
+    `)
+    
+    const mailtoLink = `mailto:${t.contact.email}?subject=${subject}&body=${body}`
+    
+    // Open email client
+    window.open(mailtoLink, '_blank')
+    
     setIsSubmitted(true)
     setFormData({ name: '', email: '', company: '', message: '' })
     
