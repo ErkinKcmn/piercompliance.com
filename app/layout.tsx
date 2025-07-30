@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -16,7 +17,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Pier Compliance - Professional Regulatory Compliance Services',
   description: 'Expert compliance consulting services for GPSR, ESPR, KKDIK, REACH, Biocidal regulations. Professional regulatory affairs and product safety solutions.',
-  keywords: 'compliance consulting, regulatory affairs, GPSR, ESPR, KKDIK, REACH, biocidal, product safety, regulatory compliance, Istanbul, Turkey',
+  keywords: 'compliance consulting, regulatory affairs, GPSR, ESPR, KKDIK, REACH, biocidal, product safety, regulatory compliance, Istanbul, Turkey, chemical regulations, sustainability, biocidal registration, SDS market, Turkish REACH, commercial law, contract law',
   authors: [{ name: 'Pier Compliance' }],
   creator: 'Pier Compliance',
   publisher: 'Pier Compliance',
@@ -28,6 +29,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://piercompliance.com'),
   alternates: {
     canonical: '/',
+    languages: {
+      'tr': '/tr',
+      'en': '/en',
+      'de': '/de',
+    },
   },
   openGraph: {
     title: 'Pier Compliance - Professional Regulatory Compliance Services',
@@ -80,7 +86,9 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )

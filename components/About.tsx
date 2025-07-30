@@ -1,109 +1,158 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Users, Award, Globe, Clock } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { useTranslations } from '@/lib/i18n'
+import { Award, Users, Target, CheckCircle } from 'lucide-react'
 
-const stats = [
-  { icon: Users, value: '15+', label: 'Years Experience' },
-  { icon: Award, value: '500+', label: 'Projects Completed' },
-  { icon: Globe, value: '50+', label: 'Countries Served' },
-  { icon: Clock, value: '24/7', label: 'Support Available' },
-]
+const About = () => {
+  const { language } = useLanguage()
+  const t = useTranslations(language)
 
-export default function About() {
   return (
-    <section id="about" className="section-padding bg-white">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            {t.about.title}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {t.about.subtitle}
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-              About Us
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-gray-900">
+                {t.about.founders}
+              </h3>
+              
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {t.about.description}
+              </p>
             </div>
-            
-            <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-6">
-              Leading Regulatory Compliance{' '}
-              <span className="gradient-text">Experts</span>
-            </h2>
-            
-            <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-              Pier Compliance is a premier regulatory consulting firm specializing in EU and Turkish compliance regulations. With over 15 years of experience, we help businesses navigate complex regulatory landscapes with confidence and precision.
-            </p>
-            
-            <p className="text-lg text-secondary-600 mb-8 leading-relaxed">
-              Our team of certified experts provides comprehensive solutions for GPSR, ESPR, KKDIK, REACH, and Biocidal regulations, ensuring your products meet all compliance requirements while maintaining market competitiveness.
-            </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <stat.icon className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div className="text-2xl font-bold text-secondary-900 mb-1">{stat.value}</div>
-                  <div className="text-sm text-secondary-600">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 lg:p-12">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-secondary-900 mb-2">Expert Team</h3>
-                    <p className="text-secondary-600">Our certified professionals bring deep expertise in regulatory affairs and compliance management.</p>
-                  </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="flex items-center space-x-3 mb-3">
+                  <Award className="w-6 h-6 text-blue-600" />
+                  <h4 className="font-semibold text-gray-900">Mission</h4>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-secondary-900 mb-2">Global Reach</h3>
-                    <p className="text-secondary-600">Serving clients across Europe and Turkey with localized compliance solutions.</p>
-                  </div>
+                <p className="text-gray-700 text-sm">
+                  {t.about.mission}
+                </p>
+              </div>
+              
+              <div className="bg-green-50 p-6 rounded-lg">
+                <div className="flex items-center space-x-3 mb-3">
+                  <Target className="w-6 h-6 text-green-600" />
+                  <h4 className="font-semibold text-gray-900">Vision</h4>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-secondary-900 mb-2">Timely Delivery</h3>
-                    <p className="text-secondary-600">We ensure your compliance projects are completed on time and within budget.</p>
-                  </div>
-                </div>
+                <p className="text-gray-700 text-sm">
+                  {t.about.vision}
+                </p>
               </div>
             </div>
-          </motion.div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-6">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg text-white">
+              <div className="text-4xl font-bold mb-2">15+</div>
+              <div className="text-sm opacity-90">{t.about.experience}</div>
+            </div>
+            
+            <div className="text-center p-6 bg-gray-100 rounded-lg">
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-sm text-gray-600">Projects Completed</div>
+            </div>
+            
+            <div className="text-center p-6 bg-gray-100 rounded-lg">
+              <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
+              <div className="text-sm text-gray-600">Success Rate</div>
+            </div>
+            
+            <div className="text-center p-6 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg text-white">
+              <div className="text-4xl font-bold mb-2">24/7</div>
+              <div className="text-sm opacity-90">Support Available</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Expertise Areas */}
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
+            <p className="text-gray-600">
+              Our team combines engineering expertise with legal knowledge to provide comprehensive compliance solutions.
+            </p>
+          </div>
+          
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="w-8 h-8 text-green-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
+            <p className="text-gray-600">
+              Successfully completed hundreds of compliance projects across various industries and regulations.
+            </p>
+          </div>
+          
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Industry Recognition</h3>
+            <p className="text-gray-600">
+              Recognized as a leading compliance consulting firm in Turkey and the European market.
+            </p>
+          </div>
+        </div>
+
+        {/* Values */}
+        <div className="mt-16 bg-gray-50 rounded-2xl p-8">
+          <h3 className="text-2xl font-semibold text-gray-900 text-center mb-8">Our Core Values</h3>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <CheckCircle className="w-6 h-6 text-blue-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Excellence</h4>
+              <p className="text-sm text-gray-600">Delivering the highest quality services</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Users className="w-6 h-6 text-green-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Integrity</h4>
+              <p className="text-sm text-gray-600">Maintaining ethical standards</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Target className="w-6 h-6 text-purple-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Innovation</h4>
+              <p className="text-sm text-gray-600">Finding creative solutions</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Award className="w-6 h-6 text-orange-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Trust</h4>
+              <p className="text-sm text-gray-600">Building lasting relationships</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   )
-} 
+}
+
+export default About 

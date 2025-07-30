@@ -1,139 +1,149 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ArrowRight, Shield, CheckCircle, Clock } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { useTranslations } from '@/lib/i18n'
+import { ArrowRight, Shield, CheckCircle, Users } from 'lucide-react'
 import Link from 'next/link'
 
-export default function Hero() {
+const Hero = () => {
+  const { language } = useLanguage()
+  const t = useTranslations(language)
+
   return (
-    <section id="home" className="relative pt-20 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50" />
-      <div className="absolute inset-0 bg-hero-pattern opacity-5" />
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
-      <div className="relative container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center lg:text-left"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6"
-            >
-              <Shield className="w-4 h-4 mr-2" />
-              Professional Compliance Services
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl lg:text-6xl font-bold text-secondary-900 mb-6 leading-tight"
-            >
-              Expert{' '}
-              <span className="gradient-text">Regulatory Compliance</span>
-              {' '}Solutions
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg lg:text-xl text-secondary-600 mb-8 leading-relaxed"
-            >
-              Navigate complex regulatory landscapes with confidence. Our expert team provides comprehensive compliance solutions for GPSR, ESPR, KKDIK, REACH, and Biocidal regulations.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <Link href="#contact" className="btn-primary group">
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link href="#services" className="btn-secondary">
-                View Services
-              </Link>
-            </motion.div>
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium">
+                <Shield className="w-4 h-4 mr-2" />
+                Professional Compliance Services
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                {t.hero.title}
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
+                {t.hero.subtitle}
+              </p>
+              
+              <div className="text-lg font-semibold text-blue-600">
+                "{t.hero.slogan}"
+              </div>
+            </div>
 
             {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6"
-            >
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-secondary-600">
-                <CheckCircle className="w-5 h-5 text-primary-600" />
-                <span className="text-sm font-medium">15+ Years Experience</span>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">GPSR & ESPR Compliance</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-secondary-600">
-                <Shield className="w-5 h-5 text-primary-600" />
-                <span className="text-sm font-medium">100% Compliance Rate</span>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">KKDIK & REACH Services</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-secondary-600">
-                <Clock className="w-5 h-5 text-primary-600" />
-                <span className="text-sm font-medium">24/7 Support</span>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">Biocidal Registration</span>
               </div>
-            </motion.div>
-          </motion.div>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">Legal Consulting</span>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+              >
+                {t.hero.cta}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                {t.common.contactUs}
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">15+</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">500+</div>
+                <div className="text-sm text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">100%</div>
+                <div className="text-sm text-gray-600">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
 
           {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="relative"
-          >
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-600/10 to-accent-600/10 rounded-2xl" />
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-                  Why Choose Pier Compliance?
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-4 h-4 text-primary-600" />
+          <div className="relative">
+            <div className="relative z-10">
+              <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-2xl p-8 text-white shadow-2xl">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                      <Shield className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-secondary-900">Expert Knowledge</h4>
-                      <p className="text-sm text-secondary-600">Deep understanding of EU and Turkish regulations</p>
+                      <h3 className="text-xl font-semibold">Regulatory Excellence</h3>
+                      <p className="text-blue-100">Comprehensive compliance solutions</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-4 h-4 text-primary-600" />
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span>GPSR & ESPR Compliance</span>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-secondary-900">Proven Track Record</h4>
-                      <p className="text-sm text-secondary-600">Successfully completed 500+ compliance projects</p>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span>KKDIK & REACH Services</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span>Biocidal Registration</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span>Legal Consulting</span>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-4 h-4 text-primary-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-secondary-900">Personalized Service</h4>
-                      <p className="text-sm text-secondary-600">Tailored solutions for your specific needs</p>
+                  
+                  <div className="pt-4">
+                    <div className="flex items-center space-x-2">
+                      <Users className="w-5 h-5" />
+                      <span className="text-sm">Expert team of engineers and lawyers</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </motion.div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full opacity-20"></div>
+          </div>
         </div>
       </div>
     </section>
   )
-} 
+}
+
+export default Hero 
