@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTranslations } from '@/lib/i18n'
-import { ChevronDown, ChevronUp, Shield, FileText, Globe, Zap, Battery, Leaf, Flask, Scale, Briefcase, Settings } from 'lucide-react'
+import { ChevronDown, ChevronUp, Shield, FileText, Globe, Zap, Battery, Leaf, Beaker, Scale, Briefcase, Settings } from 'lucide-react'
 
 const Services = () => {
   const { language } = useLanguage()
@@ -43,7 +43,7 @@ const Services = () => {
     },
     {
       id: 'kkdik',
-      icon: Flask,
+      icon: Beaker,
       color: 'indigo',
       service: t.services.kkdik
     },
